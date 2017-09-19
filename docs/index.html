@@ -2,10 +2,13 @@
   <head>
     <title>Destiny Exotics</title>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       html, body {
         margin: 0;
         padding: 0;
+        background-color: #0C1014;
+        min-width: 0;
       }
       .nav {
         width: 100%;
@@ -35,7 +38,6 @@
         font-family: sans-serif;
       }
       .section-header {
-        display: block;
         color: #FFFFFF;
         font-size: 30px;
         background-color: #12161A;
@@ -48,7 +50,7 @@
       .item-img {
         height: 80px;
         width: 80px;
-        border: 1px solid #FFCE1F;
+        box-sizing: border-box;
       }
       .collection {
         display: inline;
@@ -60,26 +62,56 @@
         font-weight: bold;
         background: none;
         margin-left: 10px;
+        display: block;
       }
-      .download-button {
-        float: right;
-        line-height: 55px;
-        font-family: sans-serif;
-        font-size: 17px;
-        color: #FFCE1F;
+      .inactive {
+        opacity: 0.4;
+      }
+      .active {
+        border: 1px solid #FFCE1F;
       }
     </style>
   </head>
   <body>
     <div class="nav">
       <img id="logo" src="resource/logo.png">
-      <span class="download-button">Save</span>
     </div>
     <div class="content" id="table-container">
         <span class="section-header large">exotics</span>
         <script>
-          var items = ["Rat King", "Sturm", "Sunshot", "Riskrunner", "D.A.R.C.I", "Borealis", "Fighting Lion", "The Prospector", "Legend of Acrius", "Tractor Cannon", "Graviton Lance", "Vigilance Wing", "Hard Light", "Merciless", "Skyburner's Oath", "MIDA Multi-Tool","Sweet Business", "Coldheart", "The Wardcliff Coil"];
-          var items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        var items = ["Rat King", "Sturm", "Sunshot", "Riskrunner", "D.A.R.C.I", "Borealis", "Fighting Lion", "The Prospector", "Legend of Acrius", "Tractor Cannon", "Graviton Lance", "Vigilance Wing", "Hard Light", "Merciless", "Skyburner's Oath", "MIDA Multi-Tool","Sweet Business", "Coldheart", "The Wardcliff Coil"];
+        var items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        var wl_items = ["Crown of Tempests", "Eye of another world", "Karnstein Armlets", "Lunafaction Boots", "Nezarec's Sin", "Skull of dire Ahamkara", "Starfire Protocol", "Sunbracers", "Transversive Steps", "Wings of sacred Dawn", "Winters Guile"];
+        var wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        var t_items = ["Dunemarchers", "Lion Rampant", "Peacekeepers", "Mask of the Quiet One", "An Insurmountable Skullfort", "Crest of Alpha Lupi", "Actium War Rig", "Hallowfire Heart", "ACD/0 Feedback Fence", "Doom Fang Pauldron", "Synthoceps"];
+        var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+        var h_items = ["Young Ahamkara's Spine", "Mechaneer's Tricksleeves", "The Dragon's Shadow", "Raiden Flux", "Lucky Raspberry", "Lucky Pants", "Orpheus Rig", "St0mp-EE5", "Foetracer", "Celestial Nighthawk", "Knucklehead Radar"];
+        var h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        console.log(localStorage.getItem("item_states"));
+        var item_states = JSON.parse(localStorage.getItem("item_states"));
+
+        if (item_states == null) {
+
+          var json_string = "{";
+
+          var all_items = items_addr.concat(wl_items_addr).concat(t_items_addr).concat(h_items_addr);
+
+          for (var i = 0; i < all_items.length; i++) {
+            json_string += "\"" + all_items[i] + "\"" + ":\"inactive\""
+            if (i != all_items.length - 1) {
+              json_string +=", ";
+            }
+          }
+
+          json_string += "}";
+
+          item_states = JSON.parse(json_string);
+        }
 
           var t = "<table id='items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
 
@@ -90,16 +122,12 @@
               t += "</tr><tr>";
             }
 
-            t += "<td><img class='item-img' src='resource/item/" + items_addr[i] + ".jpg'></td>"
+            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><img id='img_" + items_addr[i] +  "' class='item-img " + item_states[items_addr[i]] + "' src='resource/item/" + items_addr[i] + ".jpg'></td>"
 
           }
 
           t += "</table>";
 
-
-
-          var wl_items = ["Crown of Tempests", "Eye of another world", "Karnstein Armlets", "Lunafaction Boots", "Nezarec's Sin", "Skull of dire Ahamkara", "Starfire Protocol", "Sunbracers", "Transversive Steps", "Wings of sacred Dawn", "Winters Guile"];
-          var wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
           var wlt = "<table id='wl_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
 
@@ -109,14 +137,13 @@
               wlt += "</tr><tr>";
             }
 
-            wlt += "<td><img class='item-img' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'></td>"
+            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><img id='img_" + wl_items_addr[i] + "' class='item-img " + item_states[wl_items_addr[i]] + "' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'></td>"
 
           }
 
           wlt += "</table>";
 
-          var t_items = ["Dunemarchers", "Lion Rampant", "Peacekeepers", "Mask of the Quiet One", "An Insurmountable Skullfort", "Crest of Alpha Lupi", "Actium War Rig", "Hallowfire Heart", "ACD/0 Feedback Fence", "Doom Fang Pauldron", "Synthoceps"];
-          var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
 
           var tt = "<table id='t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
 
@@ -126,14 +153,13 @@
               tt += "</tr><tr>";
             }
 
-            tt += "<td><img class='item-img' src='resource/item/armor/" + t_items_addr[i] + ".jpg'></td>"
+            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><img id='img_" + t_items_addr[i] +  "' class='item-img " + item_states[t_items_addr[i]] + "' src='resource/item/armor/" + t_items_addr[i] + ".jpg'></td>"
 
           }
 
           tt += "</table>";
 
-          var h_items = ["Young Ahamkara's Spine", "Mechaneer's Tricksleeves", "The Dragon's Shadow", "Raiden Flux", "Lucky Raspberry", "Lucky Pants", "Orpheus Rig", "St0mp-EE5", "Foetracer", "Celestial Nighthawk", "Knucklehead Radar"];
-          var h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
 
           var ht = "<table id='h_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
 
@@ -143,13 +169,25 @@
               ht += "</tr><tr>";
             }
 
-            ht += "<td><img class='item-img' src='resource/item/armor/" + h_items_addr[i] + ".jpg'></td>"
+            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><img id='img_" + h_items_addr[i] + "' class='item-img " + item_states[h_items_addr[i]] + "' src='resource/item/armor/" + h_items_addr[i] + ".jpg'></td>"
 
           }
 
           ht += "</table>";
 
           document.getElementById('table-container').innerHTML += t + wlt + tt + ht;
+
+          function toggle(item) {
+            if (item_states[item] == "inactive") {
+              item_states[item] = "active";
+              $("#img_" + item).removeClass('inactive').addClass('active');
+              localStorage.setItem("item_states", JSON.stringify(item_states));
+            } else {
+              item_states[item] = "inactive";
+              $("#img_" + item).removeClass('active').addClass('inactive');
+              localStorage.setItem("item_states", JSON.stringify(item_states));
+            }
+          }
 
         </script>
     </div>
