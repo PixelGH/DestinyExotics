@@ -1,0 +1,104 @@
+var r_items = ["Judgement", "A Swift Verdict", "The Long Walk", "Relentless", "The End", "A Sudden Death", "Prosecutor", "Adjudicator"];
+var r_items_addr = r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+var wl_r_items = ["Boots of the Fulminator", "Wraps of the Fulminator", "Mask of the Fulminator", "Robes of the Fulminator"];
+var wl_r_items_addr = wl_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+var t_r_items = ["Greaves of Rull", "Mask of Rull", "Chassis of Rull", "Gauntlets of Rull"];
+var t_r_items_addr = t_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+var h_r_items = ["Boots of the Ace-Defiant", "Vest of the Ace-Defiant", "Grips of the Ace-Defiant", "Helm of the Ace-Defiant"];
+var h_r_items_addr = h_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+var r_item_states = JSON.parse(localStorage.getItem("r_item_states"));
+
+var r_all_items = r_items_addr.concat(wl_r_items_addr).concat(t_r_items_addr).concat(h_r_items_addr);
+
+if (r_item_states == null) {
+
+  var json_string = "{";
+
+  for (var i = 0; i < r_all_items.length; i++) {
+    json_string += "\"" + r_all_items[i] + "\"" + ":\"inactive\""
+    if (i != r_all_items.length - 1) {
+      json_string +=", ";
+    }
+  }
+
+  json_string += "}";
+
+  r_item_states = JSON.parse(json_string);
+}
+
+var r_count = 0;
+
+for (var i = 0; i < r_all_items.length; i++) {
+  if (Object.values(r_item_states)[i] == "active") {
+    r_count += 1
+  }
+}
+
+$("#raid-count").html(r_count + "/" + r_all_items.length);
+
+  var r_t = "<table id='r_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
+
+  for (var i = 0; i < r_items.length; i++) {
+
+    if (i % 4 == 0 && i != 0) {
+      r_t += "</tr><tr>";
+    }
+
+    r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><img id='img_" + r_items_addr[i] +  "' class='item-img " + r_item_states[r_items_addr[i]] + "' src='resource/item/" + r_items_addr[i] + ".jpg'></td>"
+
+  }
+
+  r_t += "</table>";
+
+
+  var wl_r_t = "<table id='wl_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
+
+  for (var i = 0; i < wl_r_items.length; i++) {
+
+    if (i % 4 == 0 && i != 0) {
+      wl_r_t += "</tr><tr>";
+    }
+
+    wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><img id='img_" + wl_r_items_addr[i] + "' class='item-img " + r_item_states[wl_r_items_addr[i]] + "' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'></td>"
+
+  }
+
+  wl_r_t += "</table>";
+
+
+
+  var t_r_t = "<table id='t_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
+
+  for (var i = 0; i < t_r_items.length; i++) {
+
+    if (i % 4 == 0 && i != 0) {
+      t_r_t += "</tr><tr>";
+    }
+
+    t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><img id='img_" + t_r_items_addr[i] +  "' class='item-img " + r_item_states[t_r_items_addr[i]] + "' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'></td>"
+
+  }
+
+  t_r_t += "</table>";
+
+
+
+  var h_r_t = "<table id='h_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
+
+  for (var i = 0; i < h_r_items.length; i++) {
+
+    if (i % 4 == 0 && i != 0) {
+      h_r_t += "</tr><tr>";
+    }
+
+    h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><img id='img_" + h_r_items_addr[i] + "' class='item-img " + r_item_states[h_r_items_addr[i]] + "' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'></td>"
+
+  }
+
+  h_r_t += "</table>";
+
+  document.getElementById('raid-table-container').innerHTML += r_t + wl_r_t + t_r_t + h_r_t;

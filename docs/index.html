@@ -302,6 +302,110 @@
 
             document.getElementById('raid-table-container').innerHTML += r_t + wl_r_t + t_r_t + h_r_t;
 
+            var t_items = ["Judgement", "A Swift Verdict", "The Long Walk", "Relentless", "The End", "A Sudden Death", "Prosecutor", "Adjudicator"];
+            var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var wl_t_items = ["Channeling Cowl", "Channeling Wraps", "Channeling Robes", "Flowing Treads"];
+            var wl_t_items_addr = wl_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var t_t_items = ["Crushing Helm", "Crushing Guard", "Crushing Plate", "Crushing Greaves"];
+            var t_t_items_addr = t_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+            var h_t_items = ["Flowing Cowl", "Flowing Grips", "Flowing Vest", "Flowing Boots"];
+            var h_t_items_addr = h_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var t_item_states = JSON.parse(localStorage.getItem("t_item_states"));
+
+            var t_all_items = t_items_addr.concat(wl_t_items_addr).concat(t_t_items_addr).concat(h_t_items_addr);
+
+            if (t_item_states == null) {
+
+              var json_string = "{";
+
+              for (var i = 0; i < t_all_items.length; i++) {
+                json_string += "\"" + t_all_items[i] + "\"" + ":\"inactive\""
+                if (i != t_all_items.length - 1) {
+                  json_string +=", ";
+                }
+              }
+
+              json_string += "}";
+
+              t_item_states = JSON.parse(json_string);
+            }
+
+            var t_count = 0;
+
+            for (var i = 0; i < t_all_items.length; i++) {
+              if (Object.values(t_item_states)[i] == "active") {
+                t_count += 1
+              }
+            }
+
+            $("#trials-count").html(t_count + "/" + t_all_items.length);
+
+              var t_t = "<table id='t_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
+
+              for (var i = 0; i < t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  t_t += "</tr><tr>";
+                }
+
+                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><img id='img_" + t_items_addr[i] +  "' class='item-img " + t_item_states[t_items_addr[i]] + "' src='resource/item/" + t_items_addr[i] + ".jpg'></td>"
+
+              }
+
+              t_t += "</table>";
+
+
+              var wl_t_t = "<table id='wl_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
+
+              for (var i = 0; i < wl_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  wl_t_t += "</tr><tr>";
+                }
+
+                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><img id='img_" + wl_t_items_addr[i] + "' class='item-img " + t_item_states[wl_t_items_addr[i]] + "' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'></td>"
+
+              }
+
+              wl_t_t += "</table>";
+
+
+
+              var t_t_t = "<table id='t_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
+
+              for (var i = 0; i < t_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  t_t_t += "</tr><tr>";
+                }
+
+                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><img id='img_" + t_t_items_addr[i] +  "' class='item-img " + t_item_states[t_t_items_addr[i]] + "' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'></td>"
+
+              }
+
+              t_t_t += "</table>";
+
+
+
+              var h_t_t = "<table id='h_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
+
+              for (var i = 0; i < h_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  h_t_t += "</tr><tr>";
+                }
+
+                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'></td>"
+
+              }
+
+              h_t_t += "</table>";
+
+              document.getElementById('trials-table-container').innerHTML += t_t + wl_t_t + t_t_t + h_t_t;
 
 
           function toggle(item) {
@@ -336,8 +440,21 @@
             }
           }
 
-
-
+          function t_toggle(item) {
+            if (t_item_states[item] == "inactive") {
+              t_item_states[item] = "active";
+              $("#img_" + item).removeClass('inactive').addClass('active');
+              localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
+              t_count += 1;
+              $("#raid-count").html(t_count + "/" + t_all_items.length);
+            } else {
+              t_item_states[item] = "inactive";
+              $("#img_" + item).removeClass('active').addClass('inactive');
+              localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
+              t_count -= 1;
+              $("#raid-count").html(t_count + "/" + t_all_items.length);
+            }
+          }
         </script>
     </div>
   </body>
