@@ -40,9 +40,8 @@
       .section-header {
         color: #FFFFFF;
         font-size: 30px;
-        background-color: #12161A;
         margin-bottom:25px;
-        font-variant: small-caps;
+        text-transform: capitalize;
       }
       .accent {
         color: #FFCE1F;
@@ -58,8 +57,6 @@
         border-spacing: 8px;
       }
       .large {
-        font-size: 40px;
-        font-weight: bold;
         background: none;
         margin-left: 10px;
         display: block;
@@ -77,6 +74,51 @@
       .table-container {
         margin-bottom: 25px;
       }
+
+      /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #22262A;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 75%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #22262A transparent transparent transparent;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
     </style>
   </head>
   <body>
@@ -144,7 +186,7 @@
               t += "</tr><tr>";
             }
 
-            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><img id='img_" + items_addr[i] +  "' class='item-img " + item_states[items_addr[i]] + "' src='resource/item/" + items_addr[i] + ".jpg'></td>"
+            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><div class='tooltip'><img id='img_" + items_addr[i] +  "' class='item-img " + item_states[items_addr[i]] + "' src='resource/item/" + items_addr[i] + ".jpg'><span class='tooltiptext'>" + items[i] + "</span></div></td>"
 
           }
 
@@ -159,7 +201,7 @@
               wlt += "</tr><tr>";
             }
 
-            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><img id='img_" + wl_items_addr[i] + "' class='item-img " + item_states[wl_items_addr[i]] + "' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'></td>"
+            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_items_addr[i] + "' class='item-img " + item_states[wl_items_addr[i]] + "' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_items[i] + "</span></div></td>"
 
           }
 
@@ -175,7 +217,7 @@
               tt += "</tr><tr>";
             }
 
-            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><img id='img_" + t_items_addr[i] +  "' class='item-img " + item_states[t_items_addr[i]] + "' src='resource/item/armor/" + t_items_addr[i] + ".jpg'></td>"
+            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_items_addr[i] +  "' class='item-img " + item_states[t_items_addr[i]] + "' src='resource/item/armor/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
 
           }
 
@@ -191,7 +233,7 @@
               ht += "</tr><tr>";
             }
 
-            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><img id='img_" + h_items_addr[i] + "' class='item-img " + item_states[h_items_addr[i]] + "' src='resource/item/armor/" + h_items_addr[i] + ".jpg'></td>"
+            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_items_addr[i] + "' class='item-img " + item_states[h_items_addr[i]] + "' src='resource/item/armor/" + h_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_items[i] + "</span></div></td>"
 
           }
 
@@ -249,7 +291,7 @@
                 r_t += "</tr><tr>";
               }
 
-              r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><img id='img_" + r_items_addr[i] +  "' class='item-img " + r_item_states[r_items_addr[i]] + "' src='resource/item/" + r_items_addr[i] + ".jpg'></td>"
+              r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + r_items_addr[i] +  "' class='item-img " + r_item_states[r_items_addr[i]] + "' src='resource/item/" + r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + r_items[i] + "</span></div></td>"
 
             }
 
@@ -264,7 +306,7 @@
                 wl_r_t += "</tr><tr>";
               }
 
-              wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><img id='img_" + wl_r_items_addr[i] + "' class='item-img " + r_item_states[wl_r_items_addr[i]] + "' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'></td>"
+              wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_r_items_addr[i] + "' class='item-img " + r_item_states[wl_r_items_addr[i]] + "' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_r_items[i] + "</span></div></td>"
 
             }
 
@@ -280,7 +322,7 @@
                 t_r_t += "</tr><tr>";
               }
 
-              t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><img id='img_" + t_r_items_addr[i] +  "' class='item-img " + r_item_states[t_r_items_addr[i]] + "' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'></td>"
+              t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_r_items_addr[i] +  "' class='item-img " + r_item_states[t_r_items_addr[i]] + "' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_r_items[i] + "</span></div></td>"
 
             }
 
@@ -296,7 +338,7 @@
                 h_r_t += "</tr><tr>";
               }
 
-              h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><img id='img_" + h_r_items_addr[i] + "' class='item-img " + r_item_states[h_r_items_addr[i]] + "' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'></td>"
+              h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_r_items_addr[i] + "' class='item-img " + r_item_states[h_r_items_addr[i]] + "' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_r_items[i] + "</span></div></td>"
 
             }
 
@@ -354,7 +396,7 @@
                   t_t += "</tr><tr>";
                 }
 
-                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><img id='img_" + t_items_addr[i] +  "' class='item-img " + t_item_states[t_items_addr[i]] + "' src='resource/item/" + t_items_addr[i] + ".jpg'></td>"
+                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_items_addr[i] +  "' class='item-img " + t_item_states[t_items_addr[i]] + "' src='resource/item/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
 
               }
 
@@ -369,7 +411,7 @@
                   wl_t_t += "</tr><tr>";
                 }
 
-                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><img id='img_" + wl_t_items_addr[i] + "' class='item-img " + t_item_states[wl_t_items_addr[i]] + "' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'></td>"
+                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_t_items_addr[i] + "' class='item-img " + t_item_states[wl_t_items_addr[i]] + "' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_t_items[i] + "</span></div></td>"
 
               }
 
@@ -385,7 +427,7 @@
                   t_t_t += "</tr><tr>";
                 }
 
-                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><img id='img_" + t_t_items_addr[i] +  "' class='item-img " + t_item_states[t_t_items_addr[i]] + "' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'></td>"
+                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_t_items_addr[i] +  "' class='item-img " + t_item_states[t_t_items_addr[i]] + "' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_t_items[i] + "</span></div></td>"
 
               }
 
@@ -401,7 +443,7 @@
                   h_t_t += "</tr><tr>";
                 }
 
-                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'></td>"
+                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_t_items[i] + "</span></div></td>"
 
               }
 
