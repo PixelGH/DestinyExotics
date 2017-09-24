@@ -88,6 +88,8 @@
         <div class="table-container" id="exotics-table-container"></div>
         <span class="section-header large accent">raid<span id="raid-count" class="count-label"></span></span>
         <div class="table-container" id="raid-table-container"></div>
+        <span class="section-header large accent">trials<span id="trials-count" class="count-label"></span></span>
+        <div class="table-container" id="trials-table-container"></div>
         <script>
 
         //EXOTICS
@@ -95,13 +97,13 @@
         var items = ["Rat King", "Sturm", "Sunshot", "Riskrunner", "D.A.R.C.I", "Borealis", "Fighting Lion", "The Prospector", "Legend of Acrius", "Tractor Cannon", "Graviton Lance", "Vigilance Wing", "Hard Light", "Merciless", "Skyburner's Oath", "MIDA Multi-Tool","Sweet Business", "Coldheart", "The Wardcliff Coil"];
         var items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-        var wl_items = ["Crown of Tempests", "Eye of another world", "Karnstein Armlets", "Lunafaction Boots", "Nezarec's Sin", "Skull of dire Ahamkara", "Starfire Protocol", "Sunbracers", "Transversive Steps", "Wings of sacred Dawn", "Winters Guile"];
+        var wl_items = ["Crown of Tempests", "Eye of another world", "Nezarec's Sin", "Skull of dire Ahamkara", "Karnstein Armlets", "Sunbracers", "Winters Guile", "Wings of sacred Dawn", "Starfire Protocol", "Lunafaction Boots", "Transversive Steps", ];
         var wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-        var t_items = ["Dunemarchers", "Lion Rampant", "Peacekeepers", "Mask of the Quiet One", "An Insurmountable Skullfort", "Crest of Alpha Lupi", "Actium War Rig", "Hallowfire Heart", "ACD/0 Feedback Fence", "Doom Fang Pauldron", "Synthoceps"];
+        var t_items = ["Mask of the Quiet One", "An Insurmountable Skullfort", "ACD/0 Feedback Fence", "Doom Fang Pauldron", "Synthoceps", "Crest of Alpha Lupi", "Actium War Rig", "Hallowfire Heart", "Dunemarchers", "Lion Rampant", "Peacekeepers"];
         var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
 
-        var h_items = ["Young Ahamkara's Spine", "Mechaneer's Tricksleeves", "The Dragon's Shadow", "Raiden Flux", "Lucky Raspberry", "Lucky Pants", "Orpheus Rig", "St0mp-EE5", "Foetracer", "Celestial Nighthawk", "Knucklehead Radar"];
+        var h_items = ["Foetracer", "Celestial Nighthawk", "Knucklehead Radar", "Young Ahamkara's Spine", "Mechaneer's Tricksleeves", "The Dragon's Shadow", "Raiden Flux", "Lucky Raspberry", "Lucky Pants", "Orpheus Rig", "St0mp-EE5"];
         var h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
         var item_states = JSON.parse(localStorage.getItem("item_states"));
@@ -200,13 +202,13 @@
           var r_items = ["Ghost Primus", "Inaugural Address", "Alone as a god", "Sins of the Past", "Conspirator", "Mob Justice", "It Stared Back", "Midnight Coup"];
           var r_items_addr = r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-          var wl_r_items = ["Boots of the Fulminator", "Wraps of the Fulminator", "Mask of the Fulminator", "Robes of the Fulminator"];
+          var wl_r_items = ["Mask of the Fulminator", "Wraps of the Fulminator", "Robes of the Fulminator", "Boots of the Fulminator"];
           var wl_r_items_addr = wl_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-          var t_r_items = ["Greaves of Rull", "Mask of Rull", "Chassis of Rull", "Gauntlets of Rull"];
+          var t_r_items = ["Mask of Rull", "Gauntlets of Rull", "Chassis of Rull", "Greaves of Rull"];
           var t_r_items_addr = t_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
 
-          var h_r_items = ["Boots of the Ace-Defiant", "Vest of the Ace-Defiant", "Grips of the Ace-Defiant", "Helm of the Ace-Defiant"];
+          var h_r_items = ["Helm of the Ace-Defiant", "Grips of the Ace-Defiant", "Vest of the Ace-Defiant", "Boots of the Ace-Defiant"];
           var h_r_items_addr = h_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
           var r_item_states = JSON.parse(localStorage.getItem("r_item_states"));
