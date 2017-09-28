@@ -3,135 +3,19 @@
     <title>Destiny Exotics</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: #0C1014;
-        min-width: 0;
-      }
-      .nav {
-        width: 100%;
-        height: 55px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #12161A;
-        z-index: 1000;
-      }
-      #logo {
-        height: 40px;
-        margin-left: 10px;
-        margin-top: 7px;
-      }
-      .content {
-        z-index: 100;
-        width: calc(100% - 20px);
-        height: 100%;
-        position: absolute;
-        top: 55px;
-        left: 0;
-        background-color: #0C1014;
-        padding: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-family: sans-serif;
-      }
-      .section-header {
-        color: #FFFFFF;
-        font-size: 30px;
-        margin-bottom:25px;
-        text-transform: capitalize;
-      }
-      .accent {
-        color: #FFCE1F;
-      }
-      .item-img {
-        height: 80px;
-        width: 80px;
-        box-sizing: border-box;
-      }
-      .collection {
-        display: inline;
-        margin-right: 20px;
-        border-spacing: 8px;
-      }
-      .large {
-        background: none;
-        margin-left: 10px;
-        display: block;
-      }
-      .inactive {
-        opacity: 0.4;
-      }
-      .active {
-        border: 1px solid #FFCE1F;
-      }
-      .count-label {
-        font-size: 17px;
-        float: right;
-      }
-      .table-container {
-        margin-bottom: 25px;
-      }
-
-      /* Tooltip container */
-      .tooltip {
-        position: relative;
-        display: inline-block;
-      }
-
-      /* Tooltip text */
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #22262A;
-        color: #fff;
-        text-align: center;
-        padding: 5px;
-        border: 1px solid #FFCE1F;
-
-        /* Position the tooltip text */
-        position: absolute;
-        z-index: 1;
-        bottom: 75%;
-        left: 50%;
-        margin-left: -60px;
-
-        /* Fade in tooltip */
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-
-      .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #FFCE1F transparent transparent transparent;
-      }
-
-      /* Show the tooltip text when you mouse over the tooltip container */
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-      }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="nav">
       <img id="logo" src="resource/logo.png">
+      <div class="nav-item first">Item Checklist</div>
     </div>
     <div class="content" id="table-container">
-        <span class="section-header large accent">exotics<span id="exotics-count" class="count-label"></span></span>
+        <span class="section-header accent">exotics<span id="exotics-count" class="count-label"></span></span>
         <div class="table-container" id="exotics-table-container"></div>
-        <span class="section-header large accent">raid<span id="raid-count" class="count-label"></span></span>
+        <span class="section-header accent">raid<span id="raid-count" class="count-label"></span></span>
         <div class="table-container" id="raid-table-container"></div>
-        <span class="section-header large accent">trials<span id="trials-count" class="count-label"></span></span>
+        <span class="section-header accent">trials<span id="trials-count" class="count-label"></span></span>
         <div class="table-container" id="trials-table-container"></div>
         <script>
 
@@ -179,7 +63,7 @@
 
         $("#exotics-count").html(count + "/" + all_items.length);
 
-          var t = "<table id='items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
+          var t = "<table id='items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
 
           for (var i = 0; i < items.length; i++) {
 
@@ -187,14 +71,14 @@
               t += "</tr><tr>";
             }
 
-            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><div class='tooltip'><img id='img_" + items_addr[i] +  "' class='item-img " + item_states[items_addr[i]] + "' src='resource/item/" + items_addr[i] + ".jpg'><span class='tooltiptext'>" + items[i] + "</span></div></td>"
+            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><div id='tt-" + items_addr[i] +  "' class='tooltip " + item_states[items_addr[i]] + "'><img id='img_" + items_addr[i] +  "' class='item-img' src='resource/item/" + items_addr[i] + ".jpg'><span class='tooltiptext'>" + items[i] + "</span></div></td>"
 
           }
 
           t += "</table>";
 
 
-          var wlt = "<table id='wl_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
+          var wlt = "<table id='wl_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
 
           for (var i = 0; i < wl_items.length; i++) {
 
@@ -202,7 +86,7 @@
               wlt += "</tr><tr>";
             }
 
-            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_items_addr[i] + "' class='item-img " + item_states[wl_items_addr[i]] + "' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_items[i] + "</span></div></td>"
+            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><div id='tt-" + wl_items_addr[i] + "' class='tooltip " + item_states[wl_items_addr[i]] + "'><img id='img_" + wl_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_items[i] + "</span></div></td>"
 
           }
 
@@ -210,7 +94,7 @@
 
 
 
-          var tt = "<table id='t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
+          var tt = "<table id='t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
 
           for (var i = 0; i < t_items.length; i++) {
 
@@ -218,7 +102,7 @@
               tt += "</tr><tr>";
             }
 
-            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_items_addr[i] +  "' class='item-img " + item_states[t_items_addr[i]] + "' src='resource/item/armor/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
+            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><div id='tt-" + t_items_addr[i] + "' class='tooltip " + item_states[t_items_addr[i]] + "'><img id='img_" + t_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
 
           }
 
@@ -226,7 +110,7 @@
 
 
 
-          var ht = "<table id='h_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
+          var ht = "<table id='h_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
 
           for (var i = 0; i < h_items.length; i++) {
 
@@ -234,7 +118,7 @@
               ht += "</tr><tr>";
             }
 
-            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_items_addr[i] + "' class='item-img " + item_states[h_items_addr[i]] + "' src='resource/item/armor/" + h_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_items[i] + "</span></div></td>"
+            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><div id='tt-" + h_items_addr[i] + "' class='tooltip " + item_states[h_items_addr[i]] + "'><img id='img_" + h_items_addr[i] + "' class='item-img' src='resource/item/armor/" + h_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_items[i] + "</span></div></td>"
 
           }
 
@@ -284,7 +168,7 @@
 
           $("#raid-count").html(r_count + "/" + r_all_items.length);
 
-            var r_t = "<table id='r_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
+            var r_t = "<table id='r_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
 
             for (var i = 0; i < r_items.length; i++) {
 
@@ -292,14 +176,14 @@
                 r_t += "</tr><tr>";
               }
 
-              r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + r_items_addr[i] +  "' class='item-img " + r_item_states[r_items_addr[i]] + "' src='resource/item/" + r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + r_items[i] + "</span></div></td>"
+              r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><div id='tt-" + r_items_addr[i] + "' class='tooltip " + r_item_states[r_items_addr[i]] + "'><img id='img_" + r_items_addr[i] +  "' class='item-img' src='resource/item/" + r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + r_items[i] + "</span></div></td>"
 
             }
 
             r_t += "</table>";
 
 
-            var wl_r_t = "<table id='wl_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
+            var wl_r_t = "<table id='wl_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
 
             for (var i = 0; i < wl_r_items.length; i++) {
 
@@ -307,7 +191,7 @@
                 wl_r_t += "</tr><tr>";
               }
 
-              wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_r_items_addr[i] + "' class='item-img " + r_item_states[wl_r_items_addr[i]] + "' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_r_items[i] + "</span></div></td>"
+              wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><div id='tt-" + wl_r_items_addr[i] + "' class='tooltip " + r_item_states[wl_r_items_addr[i]] + "'><img id='img_" + wl_r_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_r_items[i] + "</span></div></td>"
 
             }
 
@@ -315,7 +199,7 @@
 
 
 
-            var t_r_t = "<table id='t_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
+            var t_r_t = "<table id='t_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
 
             for (var i = 0; i < t_r_items.length; i++) {
 
@@ -323,7 +207,7 @@
                 t_r_t += "</tr><tr>";
               }
 
-              t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_r_items_addr[i] +  "' class='item-img " + r_item_states[t_r_items_addr[i]] + "' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_r_items[i] + "</span></div></td>"
+              t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><div id='tt-" + t_r_items_addr[i] + "' class='tooltip " + r_item_states[t_r_items_addr[i]] + "'><img id='img_" + t_r_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_r_items[i] + "</span></div></td>"
 
             }
 
@@ -331,7 +215,7 @@
 
 
 
-            var h_r_t = "<table id='h_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
+            var h_r_t = "<table id='h_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
 
             for (var i = 0; i < h_r_items.length; i++) {
 
@@ -339,7 +223,7 @@
                 h_r_t += "</tr><tr>";
               }
 
-              h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_r_items_addr[i] + "' class='item-img " + r_item_states[h_r_items_addr[i]] + "' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_r_items[i] + "</span></div></td>"
+              h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><div id='tt-" + h_r_items_addr[i] + "' class='tooltip " + r_item_states[h_r_items_addr[i]] + "'><img id='img_" + h_r_items_addr[i] + "' class='item-img' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_r_items[i] + "</span></div></td>"
 
             }
 
@@ -389,7 +273,7 @@
 
             $("#trials-count").html(t_count + "/" + t_all_items.length);
 
-              var t_t = "<table id='t_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons</th><tr>";
+              var t_t = "<table id='t_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
 
               for (var i = 0; i < t_items.length; i++) {
 
@@ -397,14 +281,14 @@
                   t_t += "</tr><tr>";
                 }
 
-                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_items_addr[i] +  "' class='item-img " + t_item_states[t_items_addr[i]] + "' src='resource/item/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
+                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><div id='tt-" + t_items_addr[i] + "' class='tooltip " + t_item_states[t_items_addr[i]] + "'><img id='img_" + t_items_addr[i] +  "' class='item-img' src='resource/item/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
 
               }
 
               t_t += "</table>";
 
 
-              var wl_t_t = "<table id='wl_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock</th><tr>";
+              var wl_t_t = "<table id='wl_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
 
               for (var i = 0; i < wl_t_items.length; i++) {
 
@@ -412,7 +296,7 @@
                   wl_t_t += "</tr><tr>";
                 }
 
-                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + wl_t_items_addr[i] + "' class='item-img " + t_item_states[wl_t_items_addr[i]] + "' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_t_items[i] + "</span></div></td>"
+                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><div id='tt-" + wl_t_items_addr[i] + "' class='tooltip " + t_item_states[wl_t_items_addr[i]] + "'><img id='img_" + wl_t_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_t_items[i] + "</span></div></td>"
 
               }
 
@@ -420,7 +304,7 @@
 
 
 
-              var t_t_t = "<table id='t_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan</th><tr>";
+              var t_t_t = "<table id='t_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
 
               for (var i = 0; i < t_t_items.length; i++) {
 
@@ -428,7 +312,7 @@
                   t_t_t += "</tr><tr>";
                 }
 
-                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + t_t_items_addr[i] +  "' class='item-img " + t_item_states[t_t_items_addr[i]] + "' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_t_items[i] + "</span></div></td>"
+                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><div id='tt-" + t_t_items_addr[i] + "' class='tooltip " + t_item_states[t_t_items_addr[i]] + "'><img id='img_" + t_t_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_t_items[i] + "</span></div></td>"
 
               }
 
@@ -436,7 +320,7 @@
 
 
 
-              var h_t_t = "<table id='h_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter</th><tr>";
+              var h_t_t = "<table id='h_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
 
               for (var i = 0; i < h_t_items.length; i++) {
 
@@ -444,7 +328,7 @@
                   h_t_t += "</tr><tr>";
                 }
 
-                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><div class='tooltip'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_t_items[i] + "</span></div></td>"
+                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><div id='tt-" + h_t_items_addr[i] + "' class='tooltip " + t_item_states[h_t_items_addr[i]] + "'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_t_items[i] + "</span></div></td>"
 
               }
 
@@ -456,13 +340,13 @@
           function toggle(item) {
             if (item_states[item] == "inactive") {
               item_states[item] = "active";
-              $("#img_" + item).removeClass('inactive').addClass('active');
+              $("#tt-" + item).removeClass('inactive').addClass('active');
               localStorage.setItem("item_states", JSON.stringify(item_states));
               count += 1;
               $("#exotics-count").html(count + "/" + all_items.length);
             } else {
               item_states[item] = "inactive";
-              $("#img_" + item).removeClass('active').addClass('inactive');
+              $("#tt-" + item).removeClass('active').addClass('inactive');
               localStorage.setItem("item_states", JSON.stringify(item_states));
               count -= 1;
               $("#exotics-count").html(count + "/" + all_items.length);
@@ -472,13 +356,13 @@
           function r_toggle(item) {
             if (r_item_states[item] == "inactive") {
               r_item_states[item] = "active";
-              $("#img_" + item).removeClass('inactive').addClass('active');
+              $("#tt-" + item).removeClass('inactive').addClass('active');
               localStorage.setItem("r_item_states", JSON.stringify(r_item_states));
               r_count += 1;
               $("#raid-count").html(r_count + "/" + r_all_items.length);
             } else {
               r_item_states[item] = "inactive";
-              $("#img_" + item).removeClass('active').addClass('inactive');
+              $("#tt-" + item).removeClass('active').addClass('inactive');
               localStorage.setItem("r_item_states", JSON.stringify(r_item_states));
               r_count -= 1;
               $("#raid-count").html(r_count + "/" + r_all_items.length);
@@ -488,16 +372,16 @@
           function t_toggle(item) {
             if (t_item_states[item] == "inactive") {
               t_item_states[item] = "active";
-              $("#img_" + item).removeClass('inactive').addClass('active');
+              $("#tt-" + item).removeClass('inactive').addClass('active');
               localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
               t_count += 1;
-              $("#raid-count").html(t_count + "/" + t_all_items.length);
+              $("#trials-count").html(t_count + "/" + t_all_items.length);
             } else {
               t_item_states[item] = "inactive";
-              $("#img_" + item).removeClass('active').addClass('inactive');
+              $("#tt-" + item).removeClass('active').addClass('inactive');
               localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
               t_count -= 1;
-              $("#raid-count").html(t_count + "/" + t_all_items.length);
+              $("#trials-count").html(t_count + "/" + t_all_items.length);
             }
           }
         </script>
