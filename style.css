@@ -12,7 +12,7 @@ html, body {
   left: 0;
   background-color: #12161A;
   z-index: 1000;
-  box-shadow: 0px 2px 2px gray;
+  box-shadow: 0px 2px 2px black;
 }
 .nav-item {
   display: inline-block;
