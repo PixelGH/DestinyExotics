@@ -11,11 +11,11 @@
       <div class="nav-item first">Item Checklist</div>
     </div>
     <div class="content" id="table-container">
-        <span class="section-header accent">exotics<span id="exotics-count" class="count-label"></span></span>
+        <span class="section-header accent">exotics<span id="exotics-count" class="count-label"></span><div class="separator dark"></div></span>
         <div class="table-container" id="exotics-table-container"></div>
-        <span class="section-header accent">raid<span id="raid-count" class="count-label"></span></span>
+        <span class="section-header accent">raid<span id="raid-count" class="count-label"></span><div class="separator dark"></div></span>
         <div class="table-container" id="raid-table-container"></div>
-        <span class="section-header accent">trials<span id="trials-count" class="count-label"></span></span>
+        <span class="section-header accent">trials<span id="trials-count" class="count-label"></span><div class="separator dark"></div></span>
         <div class="table-container" id="trials-table-container"></div>
         <script>
 
@@ -124,7 +124,7 @@
 
           ht += "</table>";
 
-          document.getElementById('exotics-table-container').innerHTML += t + wlt + tt + ht;
+          document.getElementById('exotics-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + t + "</td><td>" + wlt + "</td><td>" + tt + "</td><td>" + ht + "</td></tr></table>";
 
           var r_items = ["Ghost Primus", "Inaugural Address", "Alone as a god", "Sins of the Past", "Conspirator", "Mob Justice", "It Stared Back", "Midnight Coup"];
           var r_items_addr = r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
@@ -229,7 +229,7 @@
 
             h_r_t += "</table>";
 
-            document.getElementById('raid-table-container').innerHTML += r_t + wl_r_t + t_r_t + h_r_t;
+            document.getElementById('raid-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + r_t + "</td><td>" + wl_r_t + "</td><td>" + t_r_t + "</td><td>" + h_r_t + "</td></tr></table>";
 
             var t_items = ["Judgement", "A Swift Verdict", "The Long Walk", "Relentless", "The End", "A Sudden Death", "Prosecutor", "Adjudicator"];
             var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
@@ -334,7 +334,7 @@
 
               h_t_t += "</table>";
 
-              document.getElementById('trials-table-container').innerHTML += t_t + wl_t_t + t_t_t + h_t_t;
+              document.getElementById('trials-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + t_t + "</td><td>" + wl_t_t + "</td><td>" + t_t_t + "</td><td>" + h_t_t + "</td></tr></table>";
 
 
           function toggle(item) {

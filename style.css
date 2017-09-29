@@ -38,10 +38,11 @@ html, body {
 .content {
   z-index: 100;
   height: 100%;
+  width: calc(100% - 50px);
   position: absolute;
   top: 55px;
   left: 0;
-  padding: 10px;
+  padding: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: sans-serif;
@@ -58,13 +59,12 @@ html, body {
   color: #12161A;
 }
 .item-img {
-  height: 75px;
+  width: 75px;
   padding: 0;
   box-sizing: border-box;
 }
 .collection {
-  display: inline;
-  margin-right: 20px;
+
 }
 .collection td {
   border-left: 10px solid transparent;
@@ -90,6 +90,7 @@ html, body {
 }
 .count-label {
   font-size: 15px;
+  float: right;
 }
 .count-label:before {
   content: " ";
@@ -145,4 +146,22 @@ html, body {
   height: 3px;
   width: 100%;
   background-color: white;
+}
+.dark {
+  background-color: #12161A;
+}
+
+.scaling-table {
+  width: 100%;
+  min-width: 0;
+}
+
+.scaling-table td {
+  vertical-align: top;
+}
+
+@media(max-width: 480px) {
+  .scaling-table > tbody > tr > td {
+    display: table-row;
+  }
 }
