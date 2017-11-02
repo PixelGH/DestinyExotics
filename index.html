@@ -26,7 +26,7 @@
         $.getJSON( "https://pixelgh.github.io/DestinyExotics/resource/items.json", function( data ) {
           console.log(data);
           json = data;
-        });
+
 
         var items = json.sets[0].weapons;
         var items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
@@ -132,6 +132,8 @@
           ht += "</table>";
 
           document.getElementById('exotics-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + t + "</td><td>" + wlt + "</td><td>" + tt + "</td><td>" + ht + "</td></tr></table>";
+
+          });
 
           var r_items = ["Ghost Primus", "Inaugural Address", "Alone as a god", "Sins of the Past", "Conspirator", "Mob Justice", "It Stared Back", "Midnight Coup"];
           var r_items_addr = r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
