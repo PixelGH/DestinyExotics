@@ -1,0 +1,49 @@
+{
+  "sets": [
+    {
+      "title": "Exotics",
+      "weapons": [
+        "Rat King", "Sturm", "Sunshot", "Riskrunner", "D.A.R.C.I", "Borealis", "Fighting Lion", "The Prospector", "Legend of Acrius", "Tractor Cannon", "Graviton Lance", "Vigilance Wing", "Hard Light", "Merciless", "Skyburner's Oath", "MIDA Multi-Tool","Sweet Business", "Coldheart", "The Wardcliff Coil"
+      ],
+      "warlock": [
+        "Crown of Tempests", "Eye of another world", "Nezarec's Sin", "Skull of dire Ahamkara", "Karnstein Armlets", "Sunbracers", "Winters Guile", "Wings of sacred Dawn", "Starfire Protocol", "Lunafaction Boots", "Transversive Steps"
+      ],
+      "titan": [
+        "Mask of the Quiet One", "An Insurmountable Skullfort", "ACD/0 Feedback Fence", "Doom Fang Pauldron", "Synthoceps", "Crest of Alpha Lupi", "Actium War Rig", "Hallowfire Heart", "Dunemarchers", "Lion Rampant", "Peacekeepers"
+      ],
+      "hunter": [
+        "Foetracer", "Celestial Nighthawk", "Knucklehead Radar", "Young Ahamkara's Spine", "Mechaneer's Tricksleeves", "The Dragon's Shadow", "Raiden Flux", "Lucky Raspberry", "Lucky Pants", "Orpheus Rig", "St0mp-EE5"
+      ]
+    },
+    {
+      "title": "Raid",
+      "weapons": [
+        "Ghost Primus", "Inaugural Address", "Alone as a god", "Sins of the Past", "Conspirator", "Mob Justice", "It Stared Back", "Midnight Coup"
+      ],
+      "warlock": [
+        "Mask of the Fulminator", "Wraps of the Fulminator", "Robes of the Fulminator", "Boots of the Fulminator"
+      ],
+      "titan": [
+        "Mask of Rull", "Gauntlets of Rull", "Chassis of Rull", "Greaves of Rull"
+      ],
+      "hunter": [
+        "Helm of the Ace-Defiant", "Grips of the Ace-Defiant", "Vest of the Ace-Defiant", "Boots of the Ace-Defiant"
+      ]
+    },
+    {
+      "title": "Trials",
+      "weapons": [
+        "Judgement", "A Swift Verdict", "The Long Walk", "Relentless", "The End", "A Sudden Death", "Prosecutor", "Adjudicator"
+      ],
+      "warlock": [
+        "Channeling Cowl", "Channeling Wraps", "Channeling Robes", "Flowing Treads"
+      ],
+      "titan": [
+        "Crushing Helm", "Crushing Guard", "Crushing Plate", "Crushing Greaves"
+      ],
+      "hunter": [
+        "Flowing Cowl", "Flowing Grips", "Flowing Vest", "Flowing Boots"
+      ]
+    }
+  ]
+}
