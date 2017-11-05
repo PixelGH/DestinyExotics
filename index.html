@@ -23,6 +23,16 @@
 
         var json;
 
+        var items;
+        var items_addr;
+        var wl_items;
+        var wl_items_add;
+        var t_items;
+        var t_items_addr;
+        var h_items;
+        var h_items_addr;
+        var count = 0;
+
         var item_states = JSON.parse(localStorage.getItem("item_states"));
 
         $.getJSON( "https://pixelgh.github.io/DestinyExotics/resource/items.json", function( data ) {
@@ -30,19 +40,19 @@
           json = data;
 
 
-        var items = json.sets[0].weapons;
-        var items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+        items = json.sets[0].weapons;
+        items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-        var wl_items = json.sets[0].warlock;
-        var wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+        wl_items = json.sets[0].warlock;
+        wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-        var t_items = json.sets[0].titan;
-        var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+        t_items = json.sets[0].titan;
+        t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
 
-        var h_items = json.sets[0].hunter;
-        var h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+        h_items = json.sets[0].hunter;
+        h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
 
-        var all_items = items_addr.concat(wl_items_addr).concat(t_items_addr).concat(h_items_addr);
+        all_items = items_addr.concat(wl_items_addr).concat(t_items_addr).concat(h_items_addr);
 
         if (item_states == null) {
 
@@ -60,7 +70,6 @@
           item_states = JSON.parse(json_string);
         }
 
-        var count = 0;
 
         for (var i = 0; i < all_items.length; i++) {
           if (Object.values(item_states)[i] == "active") {
