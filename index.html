@@ -23,6 +23,8 @@
 
         var json;
 
+        var item_states = JSON.parse(localStorage.getItem("item_states"));
+
         $.getJSON( "https://pixelgh.github.io/DestinyExotics/resource/items.json", function( data ) {
           console.log(data);
           json = data;
@@ -39,8 +41,6 @@
 
         var h_items = json.sets[0].hunter;
         var h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
-
-        var item_states = JSON.parse(localStorage.getItem("item_states"));
 
         var all_items = items_addr.concat(wl_items_addr).concat(t_items_addr).concat(h_items_addr);
 
