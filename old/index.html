@@ -1,0 +1,408 @@
+<html>
+  <head>
+    <title>Destiny Exotics</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="nav">
+      <img id="logo" src="resource/logo.png">
+      <div class="nav-item first">Item Checklist</div>
+    </div>
+    <div class="content" id="table-container">
+        <span class="section-header accent">exotics<span id="exotics-count" class="count-label"></span><div class="separator dark"></div></span>
+        <div class="table-container" id="exotics-table-container"></div>
+        <span class="section-header accent">raid<span id="raid-count" class="count-label"></span><div class="separator dark"></div></span>
+        <div class="table-container" id="raid-table-container"></div>
+        <span class="section-header accent">trials<span id="trials-count" class="count-label"></span><div class="separator dark"></div></span>
+        <div class="table-container" id="trials-table-container"></div>
+        <script>
+
+        //EXOTICS
+
+        var json;
+
+        var items;
+        var items_addr;
+        var wl_items;
+        var wl_items_add;
+        var t_items;
+        var t_items_addr;
+        var h_items;
+        var h_items_addr;
+        var count = 0;
+
+        var item_states = JSON.parse(localStorage.getItem("item_states"));
+
+        $.getJSON( "https://pixelgh.github.io/DestinyExotics/resource/items.json", function( data ) {
+          console.log(data);
+          json = data;
+
+
+        items = json.sets[0].weapons;
+        items_addr = items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        wl_items = json.sets[0].warlock;
+        wl_items_addr = wl_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        t_items = json.sets[0].titan;
+        t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+        h_items = json.sets[0].hunter;
+        h_items_addr = h_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+        all_items = items_addr.concat(wl_items_addr).concat(t_items_addr).concat(h_items_addr);
+
+        if (item_states == null) {
+
+          var json_string = "{";
+
+          for (var i = 0; i < all_items.length; i++) {
+            json_string += "\"" + all_items[i] + "\"" + ":\"inactive\""
+            if (i != all_items.length - 1) {
+              json_string +=", ";
+            }
+          }
+
+          json_string += "}";
+
+          item_states = JSON.parse(json_string);
+        }
+
+
+        for (var i = 0; i < all_items.length; i++) {
+          if (Object.values(item_states)[i] == "active") {
+            count += 1
+          }
+        }
+
+        $("#exotics-count").html(count + "/" + all_items.length);
+
+          var t = "<table id='items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
+
+          for (var i = 0; i < items.length; i++) {
+
+            if (i % 4 == 0 && i != 0) {
+              t += "</tr><tr>";
+            }
+
+            t += "<td onclick='toggle(this.id)' id='" + items_addr[i] +  "'><div id='tt-" + items_addr[i] +  "' class='tooltip " + item_states[items_addr[i]] + "'><img id='img_" + items_addr[i] +  "' class='item-img' src='resource/item/" + items_addr[i] + ".jpg'><span class='tooltiptext'>" + items[i] + "</span></div></td>"
+
+          }
+
+          t += "</table>";
+
+
+          var wlt = "<table id='wl_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
+
+          for (var i = 0; i < wl_items.length; i++) {
+
+            if (i % 4 == 0 && i != 0) {
+              wlt += "</tr><tr>";
+            }
+
+            wlt += "<td onclick='toggle(this.id)' id='" + wl_items_addr[i] +  "'><div id='tt-" + wl_items_addr[i] + "' class='tooltip " + item_states[wl_items_addr[i]] + "'><img id='img_" + wl_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_items[i] + "</span></div></td>"
+
+          }
+
+          wlt += "</table>";
+
+
+
+          var tt = "<table id='t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
+
+          for (var i = 0; i < t_items.length; i++) {
+
+            if (i % 4 == 0 && i != 0) {
+              tt += "</tr><tr>";
+            }
+
+            tt += "<td onclick='toggle(this.id)' id='" + t_items_addr[i] +  "'><div id='tt-" + t_items_addr[i] + "' class='tooltip " + item_states[t_items_addr[i]] + "'><img id='img_" + t_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
+
+          }
+
+          tt += "</table>";
+
+
+
+          var ht = "<table id='h_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
+
+          for (var i = 0; i < h_items.length; i++) {
+
+            if (i % 4 == 0 && i != 0) {
+              ht += "</tr><tr>";
+            }
+
+            ht +=  "<td onclick='toggle(this.id)' id='" + h_items_addr[i] +  "'><div id='tt-" + h_items_addr[i] + "' class='tooltip " + item_states[h_items_addr[i]] + "'><img id='img_" + h_items_addr[i] + "' class='item-img' src='resource/item/armor/" + h_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_items[i] + "</span></div></td>"
+
+          }
+
+          ht += "</table>";
+
+          document.getElementById('exotics-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + t + "</td><td>" + wlt + "</td><td>" + tt + "</td><td>" + ht + "</td></tr></table>";
+
+          });
+
+          var r_items = ["Ghost Primus", "Inaugural Address", "Alone as a god", "Sins of the Past", "Conspirator", "Mob Justice", "It Stared Back", "Midnight Coup"];
+          var r_items_addr = r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+          var wl_r_items = ["Mask of the Fulminator", "Wraps of the Fulminator", "Robes of the Fulminator", "Boots of the Fulminator"];
+          var wl_r_items_addr = wl_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+          var t_r_items = ["Mask of Rull", "Gauntlets of Rull", "Chassis of Rull", "Greaves of Rull"];
+          var t_r_items_addr = t_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+          var h_r_items = ["Helm of the Ace-Defiant", "Grips of the Ace-Defiant", "Vest of the Ace-Defiant", "Boots of the Ace-Defiant"];
+          var h_r_items_addr = h_r_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+          var r_item_states = JSON.parse(localStorage.getItem("r_item_states"));
+
+          var r_all_items = r_items_addr.concat(wl_r_items_addr).concat(t_r_items_addr).concat(h_r_items_addr);
+
+          if (r_item_states == null) {
+
+            var json_string = "{";
+
+            for (var i = 0; i < r_all_items.length; i++) {
+              json_string += "\"" + r_all_items[i] + "\"" + ":\"inactive\""
+              if (i != r_all_items.length - 1) {
+                json_string +=", ";
+              }
+            }
+
+            json_string += "}";
+
+            r_item_states = JSON.parse(json_string);
+          }
+
+          var r_count = 0;
+
+          for (var i = 0; i < r_all_items.length; i++) {
+            if (Object.values(r_item_states)[i] == "active") {
+              r_count += 1
+            }
+          }
+
+          $("#raid-count").html(r_count + "/" + r_all_items.length);
+
+            var r_t = "<table id='r_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
+
+            for (var i = 0; i < r_items.length; i++) {
+
+              if (i % 4 == 0 && i != 0) {
+                r_t += "</tr><tr>";
+              }
+
+              r_t += "<td onclick='r_toggle(this.id)' id='" + r_items_addr[i] +  "'><div id='tt-" + r_items_addr[i] + "' class='tooltip " + r_item_states[r_items_addr[i]] + "'><img id='img_" + r_items_addr[i] +  "' class='item-img' src='resource/item/" + r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + r_items[i] + "</span></div></td>"
+
+            }
+
+            r_t += "</table>";
+
+
+            var wl_r_t = "<table id='wl_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
+
+            for (var i = 0; i < wl_r_items.length; i++) {
+
+              if (i % 4 == 0 && i != 0) {
+                wl_r_t += "</tr><tr>";
+              }
+
+              wl_r_t += "<td onclick='r_toggle(this.id)' id='" + wl_r_items_addr[i] +  "'><div id='tt-" + wl_r_items_addr[i] + "' class='tooltip " + r_item_states[wl_r_items_addr[i]] + "'><img id='img_" + wl_r_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_r_items[i] + "</span></div></td>"
+
+            }
+
+            wl_r_t += "</table>";
+
+
+
+            var t_r_t = "<table id='t_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
+
+            for (var i = 0; i < t_r_items.length; i++) {
+
+              if (i % 4 == 0 && i != 0) {
+                t_r_t += "</tr><tr>";
+              }
+
+              t_r_t += "<td onclick='r_toggle(this.id)' id='" + t_r_items_addr[i] +  "'><div id='tt-" + t_r_items_addr[i] + "' class='tooltip " + r_item_states[t_r_items_addr[i]] + "'><img id='img_" + t_r_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_r_items[i] + "</span></div></td>"
+
+            }
+
+            t_r_t += "</table>";
+
+
+
+            var h_r_t = "<table id='h_r_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
+
+            for (var i = 0; i < h_r_items.length; i++) {
+
+              if (i % 4 == 0 && i != 0) {
+                h_r_t += "</tr><tr>";
+              }
+
+              h_r_t +=  "<td onclick='r_toggle(this.id)' id='" + h_r_items_addr[i] +  "'><div id='tt-" + h_r_items_addr[i] + "' class='tooltip " + r_item_states[h_r_items_addr[i]] + "'><img id='img_" + h_r_items_addr[i] + "' class='item-img' src='resource/item/armor/" + h_r_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_r_items[i] + "</span></div></td>"
+
+            }
+
+            h_r_t += "</table>";
+
+            document.getElementById('raid-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + r_t + "</td><td>" + wl_r_t + "</td><td>" + t_r_t + "</td><td>" + h_r_t + "</td></tr></table>";
+
+            var t_items = ["Judgement", "A Swift Verdict", "The Long Walk", "Relentless", "The End", "A Sudden Death", "Prosecutor", "Adjudicator"];
+            var t_items_addr = t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var wl_t_items = ["Channeling Cowl", "Channeling Wraps", "Channeling Robes", "Flowing Treads"];
+            var wl_t_items_addr = wl_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var t_t_items = ["Crushing Helm", "Crushing Guard", "Crushing Plate", "Crushing Greaves"];
+            var t_t_items_addr = t_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').replace(/\//g, '').split('~');
+
+            var h_t_items = ["Flowing Cowl", "Flowing Grips", "Flowing Vest", "Flowing Boots"];
+            var h_t_items_addr = h_t_items.join('~').toLowerCase().replace(/ /g, '_').replace(/\./g, '').replace(/'/g,'').split('~');
+
+            var t_item_states = JSON.parse(localStorage.getItem("t_item_states"));
+
+            var t_all_items = t_items_addr.concat(wl_t_items_addr).concat(t_t_items_addr).concat(h_t_items_addr);
+
+            if (t_item_states == null) {
+
+              var json_string = "{";
+
+              for (var i = 0; i < t_all_items.length; i++) {
+                json_string += "\"" + t_all_items[i] + "\"" + ":\"inactive\""
+                if (i != t_all_items.length - 1) {
+                  json_string +=", ";
+                }
+              }
+
+              json_string += "}";
+
+              t_item_states = JSON.parse(json_string);
+            }
+
+            var t_count = 0;
+
+            for (var i = 0; i < t_all_items.length; i++) {
+              if (Object.values(t_item_states)[i] == "active") {
+                t_count += 1
+              }
+            }
+
+            $("#trials-count").html(t_count + "/" + t_all_items.length);
+
+              var t_t = "<table id='t_items' class='collection'><th colspan='100%' align='left' class='section-header'>weapons<div class='separator'></div></th><tr>";
+
+              for (var i = 0; i < t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  t_t += "</tr><tr>";
+                }
+
+                t_t += "<td onclick='t_toggle(this.id)' id='" + t_items_addr[i] +  "'><div id='tt-" + t_items_addr[i] + "' class='tooltip " + t_item_states[t_items_addr[i]] + "'><img id='img_" + t_items_addr[i] +  "' class='item-img' src='resource/item/" + t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_items[i] + "</span></div></td>"
+
+              }
+
+              t_t += "</table>";
+
+
+              var wl_t_t = "<table id='wl_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>warlock<div class='separator'></div></th><tr>";
+
+              for (var i = 0; i < wl_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  wl_t_t += "</tr><tr>";
+                }
+
+                wl_t_t += "<td onclick='t_toggle(this.id)' id='" + wl_t_items_addr[i] +  "'><div id='tt-" + wl_t_items_addr[i] + "' class='tooltip " + t_item_states[wl_t_items_addr[i]] + "'><img id='img_" + wl_t_items_addr[i] + "' class='item-img' src='resource/item/armor/" + wl_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + wl_t_items[i] + "</span></div></td>"
+
+              }
+
+              wl_t_t += "</table>";
+
+
+
+              var t_t_t = "<table id='t_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>titan<div class='separator'></div></th><tr>";
+
+              for (var i = 0; i < t_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  t_t_t += "</tr><tr>";
+                }
+
+                t_t_t += "<td onclick='t_toggle(this.id)' id='" + t_t_items_addr[i] +  "'><div id='tt-" + t_t_items_addr[i] + "' class='tooltip " + t_item_states[t_t_items_addr[i]] + "'><img id='img_" + t_t_items_addr[i] +  "' class='item-img' src='resource/item/armor/" + t_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + t_t_items[i] + "</span></div></td>"
+
+              }
+
+              t_t_t += "</table>";
+
+
+
+              var h_t_t = "<table id='h_t_armor' class='collection'><th colspan='100%' align='left' class='section-header'>hunter<div class='separator'></div></th><tr>";
+
+              for (var i = 0; i < h_t_items.length; i++) {
+
+                if (i % 4 == 0 && i != 0) {
+                  h_t_t += "</tr><tr>";
+                }
+
+                h_t_t +=  "<td onclick='t_toggle(this.id)' id='" + h_t_items_addr[i] +  "'><div id='tt-" + h_t_items_addr[i] + "' class='tooltip " + t_item_states[h_t_items_addr[i]] + "'><img id='img_" + h_t_items_addr[i] + "' class='item-img " + t_item_states[h_t_items_addr[i]] + "' src='resource/item/armor/" + h_t_items_addr[i] + ".jpg'><span class='tooltiptext'>" + h_t_items[i] + "</span></div></td>"
+
+              }
+
+              h_t_t += "</table>";
+
+              document.getElementById('trials-table-container').innerHTML += "<table class='scaling-table'><tr><td>" + t_t + "</td><td>" + wl_t_t + "</td><td>" + t_t_t + "</td><td>" + h_t_t + "</td></tr></table>";
+
+
+          function toggle(item) {
+            if (item_states[item] == "inactive") {
+              item_states[item] = "active";
+              $("#tt-" + item).removeClass('inactive').addClass('active');
+              localStorage.setItem("item_states", JSON.stringify(item_states));
+              count += 1;
+              $("#exotics-count").html(count + "/" + all_items.length);
+            } else {
+              item_states[item] = "inactive";
+              $("#tt-" + item).removeClass('active').addClass('inactive');
+              localStorage.setItem("item_states", JSON.stringify(item_states));
+              count -= 1;
+              $("#exotics-count").html(count + "/" + all_items.length);
+            }
+          }
+
+          function r_toggle(item) {
+            if (r_item_states[item] == "inactive") {
+              r_item_states[item] = "active";
+              $("#tt-" + item).removeClass('inactive').addClass('active');
+              localStorage.setItem("r_item_states", JSON.stringify(r_item_states));
+              r_count += 1;
+              $("#raid-count").html(r_count + "/" + r_all_items.length);
+            } else {
+              r_item_states[item] = "inactive";
+              $("#tt-" + item).removeClass('active').addClass('inactive');
+              localStorage.setItem("r_item_states", JSON.stringify(r_item_states));
+              r_count -= 1;
+              $("#raid-count").html(r_count + "/" + r_all_items.length);
+            }
+          }
+
+          function t_toggle(item) {
+            if (t_item_states[item] == "inactive") {
+              t_item_states[item] = "active";
+              $("#tt-" + item).removeClass('inactive').addClass('active');
+              localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
+              t_count += 1;
+              $("#trials-count").html(t_count + "/" + t_all_items.length);
+            } else {
+              t_item_states[item] = "inactive";
+              $("#tt-" + item).removeClass('active').addClass('inactive');
+              localStorage.setItem("t_item_states", JSON.stringify(t_item_states));
+              t_count -= 1;
+              $("#trials-count").html(t_count + "/" + t_all_items.length);
+            }
+          }
+        </script>
+    </div>
+  </body>
+</html>
