@@ -1,390 +1,586 @@
 {
-    "armor": {
+    "collections": {
+        "weapons": {
+            "kinetic": [
+                {
+                    "name": "The Huckleberry",
+                    "id": "the_huckleberry",
+                    "url": "the_huckleberry.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "Submachine Gun",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Suros Regime",
+                    "id": "suros_regime",
+                    "url": "suros_regime.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "Auto Rifle",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Chrimson",
+                    "id": "chrimson",
+                    "url": "chrimson.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "Hand Cannon",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "The Jade Rabbit",
+                    "id": "the_jade_rabbit",
+                    "url": "the_jade_rabbit.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "Scout Rifle",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "MIDA Multi-Tool",
+                    "id": "mida_multi_tool",
+                    "url": "mida_multi_tool.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Scout Rifle",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Rat King",
+                    "id": "rat_king",
+                    "url": "rat_king.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Sidearm",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Sturm",
+                    "id": "sturm",
+                    "url": "sturm.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Hand Cannon",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Sweet Business",
+                    "id": "sweet_business",
+                    "url": "sweet_business.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Auto Rifle",
+                    "damage": "Kinetic",
+                    "detail": {}
+                },
+                {
+                    "name": "Vigilance Wing",
+                    "id": "vigilance_wing",
+                    "url": "vigilance_wing.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Pulse Rifle",
+                    "damage": "Kinetic",
+                    "detail": {}
+                }
+            ],
+            "energy": [
+                {
+                    "name": "Polaris Lance",
+                    "id": "polaris_lance",
+                    "url": "polaris_lance.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "Scout Rifle",
+                    "damage": "Solar",
+                    "detail": {}
+                },
+                {
+                    "name": "Prometheus Lens",
+                    "id": "prometheus_lens",
+                    "url": "prometheus_lens.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "Trace Rifle",
+                    "damage": "Solar",
+                    "detail": {}
+                },
+                {
+                    "name": "Coldheart",
+                    "id": "coldheart",
+                    "url": "coldheart.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Trace Rifle",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "Fighting Lion",
+                    "id": "fighting_lion",
+                    "url": "fighting_lion.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Grenade Launcher",
+                    "damage": "Void",
+                    "detail": {}
+                },
+                {
+                    "name": "Graviton Lance",
+                    "id": "graviton_lance",
+                    "url": "graviton_lance.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Pulse Rifle",
+                    "damage": "Void",
+                    "detail": {}
+                },
+                {
+                    "name": "Hard Light",
+                    "id": "hard_light",
+                    "url": "hard_light.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Auto Rifle",
+                    "damage": "Variable",
+                    "detail": {}
+                },
+                {
+                    "name": "Riskrunner",
+                    "id": "riskrunner",
+                    "url": "riskrunner.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Submachine Gun",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "Skyburner's Oath",
+                    "id": "skyburners_oath",
+                    "url": "skyburners_oath.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Scout Rifle",
+                    "damage": "Solar",
+                    "detail": {}
+                },
+                {
+                    "name": "Sunshot",
+                    "id": "sunshot",
+                    "url": "sunshot.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Hand Cannon",
+                    "damage": "Solar",
+                    "detail": {}
+                }
+            ],
+            "power": [
+                {
+                    "name": "Worldline Zero",
+                    "id": "worldline_zero",
+                    "url": "worldline_zero.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "Sword",
+                    "damage": "Void",
+                    "detail": {}
+                },
+                {
+                    "name": "Sleeper Simulant",
+                    "id": "sleeper_simulant",
+                    "url": "sleeper_simulant.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "Linear Fusion Rifle",
+                    "damage": "Solar",
+                    "detail": {}
+                },
+                {
+                    "name": "The Colony",
+                    "id": "the_colony",
+                    "url": "the_colony.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "Grenade Launcher",
+                    "damage": "Void",
+                    "detail": {}
+                },
+                {
+                    "name": "Borealis",
+                    "id": "borealis",
+                    "url": "borealis.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Sniper Rifle",
+                    "damage": "Variable",
+                    "detail": {}
+                },
+                {
+                    "name": "D.A.R.C.I.",
+                    "id": "darci",
+                    "url": "darci.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Sniper Rifle",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "Legend of Acrius",
+                    "id": "legend_of_acrius",
+                    "url": "legend_of_acrius.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Shotgun",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "Merciless",
+                    "id": "merciless",
+                    "url": "merciless.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Fusion Rifle",
+                    "damage": "Solar",
+                    "detail": {}
+                },
+                {
+                    "name": "The Prospector",
+                    "id": "the_prospector",
+                    "url": "the_prospector.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Grenade Launcher",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "The Wardcliff Coil",
+                    "id": "the_wardcliff_coil",
+                    "url": "the_wardcliff_coil.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Rocket Launcher",
+                    "damage": "Arc",
+                    "detail": {}
+                },
+                {
+                    "name": "Tractor Cannon",
+                    "id": "tractor_cannon",
+                    "url": "tractor_cannon.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "Shotgun",
+                    "damage": "Void",
+                    "detail": {}
+                }
+            ]
+        },
         "hunter": {
-            "helmet": {
-
-            },
-            "chest": {
-
-            },
-            "arms": {
-
-            },
-            "legs": {
-
-            }
+            "helmet": [
+                {
+                    "name": "Celestial Nighthawk",
+                    "id": "celestial_nighthawk",
+                    "url": "celestial_nighthawk.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Foetracer",
+                    "id": "foetracer",
+                    "url": "foetracer.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Knucklehead Radar",
+                    "id": "knucklehead_radar",
+                    "url": "knucklehead_radar.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Wormhusk Crown",
+                    "id": "wormhusk_crown",
+                    "url": "wormhusk_crown.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Graviton Forfeit",
+                    "id": "graviton_forfeit",
+                    "url": "graviton_forfeit.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "The Dragon's Shadow",
+                    "id": "the_dragons_shadow",
+                    "url": "the_dragons_shadow.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Lucky Raspberry",
+                    "id": "lucky_raspberry",
+                    "url": "lucky_raspberry.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Raiden Flux",
+                    "id": "raiden_flux",
+                    "url": "raiden_flux.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Ophidia Spathe",
+                    "id": "ophidia_spathe",
+                    "url": "ophidia_spathe.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "arms": [
+                {
+                    "name": "Mechaneer's Tricksleeves",
+                    "id": "mechaneers_tricksleeves",
+                    "url": "mechaneers_tricksleeves.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Arms",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Young Ahamkara's Spine",
+                    "id": "young_ahamkaras_spine",
+                    "url": "young_ahamkaras_spine.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Shinobu's Vow",
+                    "id": "shinobus_vow",
+                    "url": "shinobus_vow.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Aeon Swift",
+                    "id": "aeon_swift",
+                    "url": "aeon_swift.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "legs": [
+                {
+                    "name": "Lucky Pants",
+                    "id": "lucky_pants",
+                    "url": "lucky_pants.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Orpheus Rig",
+                    "id": "orpheus_rig",
+                    "url": "orpheus_rig.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "ST0MP-EE5",
+                    "id": "st0mp_ee5",
+                    "url": "st0mp_ee5.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "FR0ST-EE5",
+                    "id": "fr0st_ee5",
+                    "url": "fr0st_ee5.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Gemini Jester",
+                    "id": "gemini_jester",
+                    "url": "gemini_jester.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ]
         },
         "titan": {
-            "helmet": {
-
-            },
-            "chest": {
-
-            },
-            "arms": {
-
-            },
-            "legs": {
-                
-            }
+            "helmet": [],
+            "chest": [],
+            "arms": [],
+            "legs": []
         },
         "warlock": {
-            "helmet": {
-
-            },
-            "chest": {
-
-            },
-            "arms": {
-
-            },
-            "legs": {
-                
-            }
+            "helmet": [],
+            "chest": [],
+            "arms": [],
+            "legs": []
         }
-    },
-    "weapons": {
-        "kinetic": [
-            {
-                "name": "The Huckleberry",
-                "id": "the_huckleberry",
-                "url": "the_huckleberry.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Warmind",
-                "type": "Submachine Gun",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Suros Regime",
-                "id": "suros_regime",
-                "url": "suros_regime.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Warmind",
-                "type": "Auto Rifle",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Chrimson",
-                "id": "chrimson",
-                "url": "chrimson.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Osiris",
-                "type": "Hand Cannon",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "The Jade Rabbit",
-                "id": "the_jade_rabbit",
-                "url": "the_jade_rabbit.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Osiris",
-                "type": "Scout Rifle",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "MIDA Multi-Tool",
-                "id": "mida_multi_tool",
-                "url": "mida_multi_tool.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Scout Rifle",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Rat King",
-                "id": "rat_king",
-                "url": "rat_king.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Sidearm",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Sturm",
-                "id": "sturm",
-                "url": "sturm.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Hand Cannon",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Sweet Business",
-                "id": "sweet_business",
-                "url": "sweet_business.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Auto Rifle",
-                "damage": "Kinetic",
-                "detail": {}
-            },
-            {
-                "name": "Vigilance Wing",
-                "id": "vigilance_wing",
-                "url": "vigilance_wing.png",
-                "item": "Weapon",
-                "slot": "Kinetic",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Pulse Rifle",
-                "damage": "Kinetic",
-                "detail": {}
-            }
-        ],
-        "energy": [
-            {
-                "name": "Polaris Lance",
-                "id": "polaris_lance",
-                "url": "polaris_lance.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Warmind",
-                "type": "Scout Rifle",
-                "damage": "Solar",
-                "detail": {}
-            },
-            {
-                "name": "Prometheus Lens",
-                "id": "prometheus_lens",
-                "url": "prometheus_lens.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Osiris",
-                "type": "Trace Rifle",
-                "damage": "Solar",
-                "detail": {}
-            },
-            {
-                "name": "Coldheart",
-                "id": "coldheart",
-                "url": "coldheart.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Trace Rifle",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "Fighting Lion",
-                "id": "fighting_lion",
-                "url": "fighting_lion.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Grenade Launcher",
-                "damage": "Void",
-                "detail": {}
-            },
-            {
-                "name": "Graviton Lance",
-                "id": "graviton_lance",
-                "url": "graviton_lance.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Pulse Rifle",
-                "damage": "Void",
-                "detail": {}
-            },
-            {
-                "name": "Hard Light",
-                "id": "hard_light",
-                "url": "hard_light.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Auto Rifle",
-                "damage": "Variable",
-                "detail": {}
-            },
-            {
-                "name": "Riskrunner",
-                "id": "riskrunner",
-                "url": "riskrunner.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Submachine Gun",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "Skyburner's Oath",
-                "id": "skyburners_oath",
-                "url": "skyburners_oath.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Scout Rifle",
-                "damage": "Solar",
-                "detail": {}
-            },
-            {
-                "name": "Sunshot",
-                "id": "sunshot",
-                "url": "sunshot.png",
-                "item": "Weapon",
-                "slot": "Energy",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Hand Cannon",
-                "damage": "Solar",
-                "detail": {}
-            }
-        ],
-        "power": [
-            {
-                "name": "Worldline Zero",
-                "id": "worldline_zero",
-                "url": "worldline_zero.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Warmind",
-                "type": "Sword",
-                "damage": "Void",
-                "detail": {}
-            },
-            {
-                "name": "Sleeper Simulant",
-                "id": "sleeper_simulant",
-                "url": "sleeper_simulant.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Warmind",
-                "type": "Linear Fusion Rifle",
-                "damage": "Solar",
-                "detail": {}
-            },
-            {
-                "name": "The Colony",
-                "id": "the_colony",
-                "url": "the_colony.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Osiris",
-                "type": "Grenade Launcher",
-                "damage": "Void",
-                "detail": {}
-            },
-            {
-                "name": "Borealis",
-                "id": "borealis",
-                "url": "borealis.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Sniper Rifle",
-                "damage": "Variable",
-                "detail": {}
-            },
-            {
-                "name": "D.A.R.C.I.",
-                "id": "darci",
-                "url": "darci.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Sniper Rifle",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "Legend of Acrius",
-                "id": "legend_of_acrius",
-                "url": "legend_of_acrius.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Shotgun",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "Merciless",
-                "id": "merciless",
-                "url": "merciless.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Fusion Rifle",
-                "damage": "Solar",
-                "detail": {}
-            },
-            {
-                "name": "The Prospector",
-                "id": "the_prospector",
-                "url": "the_prospector.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Grenade Launcher",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "The Wardcliff Coil",
-                "id": "the_wardcliff_coil",
-                "url": "the_wardcliff_coil.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Rocket Launcher",
-                "damage": "Arc",
-                "detail": {}
-            },
-            {
-                "name": "Tractor Cannon",
-                "id": "tractor_cannon",
-                "url": "tractor_cannon.png",
-                "item": "Weapon",
-                "slot": "Power",
-                "rarity": "Exotic",
-                "dlc": "Vanilla",
-                "type": "Shotgun",
-                "damage": "Void",
-                "detail": {}
-            }
-        ]
     }
 }
