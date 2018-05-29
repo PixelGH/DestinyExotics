@@ -13,12 +13,13 @@ $.getJSON('db.json', (json) => {
         }
         $('#main-container').append(`<div class="main-super-category" title=${collection}>${itemsCollection}</div>`)
     }
-})
 
-
-$(document).ready(() => {
-    $('.item').click((event) => {
-        $(event.target).addClass('active');
-        $(event.target).removeClass('inactive');
+    $(document).ready(() => {
+        $('.item').click((event) => {
+            $(event.target).addClass('active');
+            $(event.target).removeClass('inactive');
+        })
     })
 })
+
+
