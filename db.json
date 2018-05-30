@@ -1,6 +1,6 @@
 {
     "collections": {
-        "weapons": {
+        "exotic weapons": {
             "kinetic": [
                 {
                     "name": "The Huckleberry",
@@ -344,7 +344,7 @@
                 }
             ]
         },
-        "hunter": {
+        "hunter exotics": {
             "helmet": [
                 {
                     "name": "Celestial Nighthawk",
@@ -570,7 +570,7 @@
                 }
             ]
         },
-        "titan": {
+        "titan exotics": {
             "helmet": [
                 {
                     "name": "Eternal Warrior",
@@ -796,7 +796,7 @@
                 }
             ]
         },
-        "warlock": {
+        "warlock exotics": {
             "helmet": [],
             "chest": [],
             "arms": [],

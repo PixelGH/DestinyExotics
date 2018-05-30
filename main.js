@@ -10,12 +10,18 @@ $(document).ready(() => {
             for (var slot in collections[collection]) {
                 let itemsSlot = '';
                 for (var item in collections[collection][slot]) {
-                    itemsSlot += `<div class="item inactive" id="${collections[collection][slot][item].id}" style="background-image:url('resource/${collections[collection][slot][item].url}')"></div>`
+                    itemsSlot += `
+                    <div class="item inactive" id="${collections[collection][slot][item].id}" style="background-image:url('resource/${collections[collection][slot][item].url}')">
+                        <div class="tooltip">
+                            <div class="tooltip-title">${collections[collection][slot][item].name}</div>
+                            <div class="tooltip-subtitle">"Lorem Ipsum dolor sit amet consetetur adiscipim elitr."</div>
+                        </div>
+                    </div>`
                     items[collections[collection][slot][item].id] = 'inactive';
                 }
                 itemsCollection += `<div class="main-category" title="${slot}">${itemsSlot}</div>`
             }
-            $('#main-container').append(`<div class="main-super-category" title=${collection}>${itemsCollection}</div>`)
+            $('#main-container').append(`<div class="main-super-category" title="${collection}">${itemsCollection}</div>`)
         }
 
         loadItems();
@@ -37,6 +43,14 @@ $(document).ready(() => {
                 $(event.target).removeClass('inactive');
                 saveItem(event.target.id, 'active');
             }
+        })
+
+        $('.item').mousemove((event) => {
+            var x = event.clientX, y = event.clientY
+            $(event.target).find('.tooltip').css({
+                'top': `${y - $(event.target).offset().top - 50}px`,
+                'left': `${x - $(event.target).offset().left + 20}px`
+            })
         })
     })
 })

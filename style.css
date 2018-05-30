@@ -14,8 +14,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 50px;
+    margin-right: 0px;
     position: relative;
     max-width: 500px;
+    border-left: 1px solid #CECECE;
 }
 
 .main-super-category::after {
@@ -25,13 +27,13 @@ body {
     text-transform: uppercase;
     font-weight: bolder;
     color: #12161A;
-    border-bottom: 3px solid #12161A;
 }
 
 .main-category {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px;
+    margin: 35px;
+    margin-left: 10px;
     position: relative;
     width: 500px;
 }
@@ -102,12 +104,6 @@ body {
     display: inline-block;
 }
 
-li {
-    list-style-type: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .nav {
     width: 100%;
     position: absolute;
@@ -120,4 +116,53 @@ li {
 #content {
     margin-top: 50px;
     display: flex;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.collapsed * {
+    display: none;
+}
+
+.collapse-button {
+    display: inline-block;
+
+}
+
+.list-title {
+    display: inline;
+}
+
+.tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    background-color: #12161AEE;
+    display: none;
+    z-index: 100;
+    cursor: default;
+    pointer-events: none;
+}
+
+.item:hover .tooltip {
+    display: block;
+}
+
+.tooltip-title {
+    color: white;
+    white-space: nowrap;
+}
+
+.tooltip-subtitle {
+    color: #EEEEEE;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    font-style: italic;
+    font-size: 13px;
 }
