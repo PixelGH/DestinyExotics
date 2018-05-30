@@ -571,10 +571,230 @@
             ]
         },
         "titan": {
-            "helmet": [],
-            "chest": [],
-            "arms": [],
-            "legs": []
+            "helmet": [
+                {
+                    "name": "Eternal Warrior",
+                    "id": "eternal_warrior",
+                    "url": "eternal_warrior.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Helm of Saint-14",
+                    "id": "helm_of_saint_14",
+                    "url": "helm_of_saint_14.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Insurmountable Skullfort",
+                    "id": "insurmountable_skullfort",
+                    "url": "insurmountable_skullfort.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Mask of the Quiet One",
+                    "id": "mask_of_the_quiet_one",
+                    "url": "mask_of_the_quiet_one.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "Armamentarium",
+                    "id": "armamentarium",
+                    "url": "armamentarium.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Actium War Rig",
+                    "id": "actium_war_rig",
+                    "url": "actium_war_rig.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Crest of Alpha Lupi",
+                    "id": "crest_of_alpha_lupi",
+                    "url": "crest_of_alpha_lupi.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Hallowfire Heart",
+                    "id": "hallowfire_heart",
+                    "url": "hallowfire_heart.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "arms": [
+                {
+                    "name": "Wormgod Caress",
+                    "id": "wormgod_caress",
+                    "url": "wormgod_caress.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Ashen Wake",
+                    "id": "ashen_wake",
+                    "url": "ashen_wake.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Aeon Safe",
+                    "id": "aeon_safe",
+                    "url": "aeon_safe.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "ACD/0 Feedback Fence",
+                    "id": "acd_0_feedback_fence",
+                    "url": "acd0_feedback_fence.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Doom Fang Pauldron",
+                    "id": "doom_fang_pauldron",
+                    "url": "doom_fang_pauldron.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Synthoceps",
+                    "id": "synthoceps",
+                    "url": "synthoceps.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "legs": [
+                {
+                    "name": "Mk. 44 Stand Asides",
+                    "id": "mk_44_stand_asides",
+                    "url": "mk_44_stand_asides.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Dumemarchers",
+                    "id": "dunemarchers",
+                    "url": "dunemarchers.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Lion Rampant",
+                    "id": "lion_rampant",
+                    "url": "lion_rampant.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Peacekeepers",
+                    "id": "peacekeepers",
+                    "url": "peacekeepers.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ]
         },
         "warlock": {
             "helmet": [],

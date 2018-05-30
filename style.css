@@ -69,7 +69,24 @@ body {
     height: 0;
     background-color: white;
     opacity: 100%;
-    transition: height 0.1s ease, opacity 0.2s 0.1s; 
+    transition: height 0.1s ease, opacity 0.2s 0.1s;
+}
+
+.item::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    outline: 0px solid white;
+    transition: background-color 0.2s ease, outline 0.1s ease;
+    outline-offset: 4px;
+}
+
+.item:hover::before {
+    outline: 3px solid white;
 }
 
 .active::after {
@@ -78,13 +95,7 @@ body {
 }
 
 .inactive::before {
-    content: "";
     background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
 }
 
 .filter-box {
