@@ -5,67 +5,54 @@
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta charset="utf-8">
 </head>
 
 <body>
-    <div class="nav"></div>
+    <div class="nav">
+        <div class="logo"></div>
+    </div>
     <div id="content">
             <div class="filter-box">
-                    <ul id="filters">
-                        <li>
-                            <div>Armor</div>
-                            <ul>
-                                <li>
-                                    <div>Hunter</div>
-                                </li>
-                                <li>
-                                    <div>Titan</div>
-                                </li>
-                                <li>
-                                    <div>Warlock</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div>Weapons</div>
-                            <ul>
-                                <li>
-                                    <div>Kinetic</div>
-                                    <ul>
-                                        <li>Auto Rifle</li>
-                                        <li>Hand Cannon</li>
-                                        <li>Pulse Rifle</li>
-                                        <li>Sidearm</li>
-                                        <li>Submachine Gun</li>
-                                        <li>Scout Rifle</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div>Energy</div>
-                                    <ul>
-                                        <li>Auto Rifle</li>
-                                        <li>Hand Cannon</li>
-                                        <li>Pulse Rifle</li>
-                                        <li>Sidearm</li>
-                                        <li>Submachine Gun</li>
-                                        <li>Scout Rifle</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div>Power</div>
-                                    <ul>
-                                        <li>Rocket Launcher</li>
-                                        <li>Sniper Rifle</li>
-                                        <li>Fusion Rifle</li>
-                                        <li>Linear Fusion Rifle</li>
-                                        <li>Grenade Launcher</li>
-                                        <li>Shotgun</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <div class="filter-title">Filters</div>
+                <div class="separator"></div>
+                <div class="filter-list-title"><span class="fas fa-caret-up"></span> Collection</div>
+                <ul>
+                    <li class="filter-list-item" data-filter-key="collection" data-filter-value="exotic weapons">Exotic Weapons</li>
+                    <li class="filter-list-item" data-filter-key="collection" data-filter-value="hunter exotics">Hunter Exotics</li>
+                    <li class="filter-list-item" data-filter-key="collection" data-filter-value="titan exotics">Titan Exotics</li>
+                    <li class="filter-list-item" data-filter-key="collection" data-filter-value="warlock exotics">Warlock Exotics</li>
+                </ul>
+                <div class="filter-list-title"><span class="fas fa-caret-up"></span> Type</div>
+                <ul>
+                    <li class="filter-list-item" data-filter-key="item" data-filter-value="Weapon">Weapon</li>
+                    <li class="filter-list-item" data-filter-key="item" data-filter-value="Armor">Armor</li>
+                </ul>
+                <div class="filter-list-title"><span class="fas fa-caret-up"></span> Slot</div>
+                <ul>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Helmet">Helmet</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Chest">Chest</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Arms">Arms</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Legs">Legs</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Kinetic">Kinetic</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Energy">Energy</li>
+                    <li class="filter-list-item" data-filter-key="slot" data-filter-value="Power">Power</li>
+                </ul>
+                <div class="filter-list-title"><span class="fas fa-caret-up"></span> Class</div>
+                <ul>
+                    <li class="filter-list-item" data-filter-key="class" data-filter-value="hunter">Hunter</li>
+                    <li class="filter-list-item" data-filter-key="class" data-filter-value="titan">Titan</li>
+                    <li class="filter-list-item" data-filter-key="class" data-filter-value="warlock">Warlock</li>
+                </ul>
+                <div class="filter-list-title"><span class="fas fa-caret-up"></span> Damage</div>
+                <ul>
+                    <li class="filter-list-item" data-filter-key="damage" data-filter-value="Kinetic">Kinetic</li>
+                    <li class="filter-list-item" data-filter-key="damage" data-filter-value="Solar">Solar</li>
+                    <li class="filter-list-item" data-filter-key="damage" data-filter-value="Arc">Arc</li>
+                    <li class="filter-list-item" data-filter-key="damage" data-filter-value="Void">Void</li>
+                </ul>
+            </div>
             <div id="main-container">
                     
             </div>

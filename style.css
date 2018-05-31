@@ -13,15 +13,16 @@ body {
 .main-super-category {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px;
+    margin: 20px;
     margin-right: 0px;
+    margin-top: 40px;
     position: relative;
     max-width: 500px;
     border-left: 1px solid #CECECE;
 }
 
 .main-super-category::after {
-    content: attr(title);
+    content: attr(data-heading);
     position: absolute;
     top: -35px;
     text-transform: uppercase;
@@ -39,11 +40,11 @@ body {
 }
 
 .main-category::after {
-    content: attr(title);
+    content: attr(data-heading);
     position: absolute;
     top: -35px;
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: bold;
     color: #12161A;
     border-bottom: 3px solid #12161A;
 }
@@ -100,10 +101,6 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.filter-box {
-    display: inline-block;
-}
-
 .nav {
     width: 100%;
     position: absolute;
@@ -123,15 +120,6 @@ li {
     margin-top: 5px;
     margin-bottom: 5px;
     position: relative;
-}
-
-.collapsed * {
-    display: none;
-}
-
-.collapse-button {
-    display: inline-block;
-
 }
 
 .list-title {
@@ -165,4 +153,89 @@ li {
     overflow-wrap: normal;
     font-style: italic;
     font-size: 13px;
+}
+
+.small {
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.separator {
+    width: 100%;
+    height: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid #CCCCCC;
+}
+
+.dlc-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.logo {
+    height: 100%;
+    background-image: url("logo.png");
+    background-position: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.filter-box {
+    width: 180px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.filter-title {
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.filter-list-title {
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 5px;
+}
+
+.damage-icon {
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.collapsed+ul {
+    display: none;
+}
+
+.filter-list-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-list-item-active::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background-image: url("checkmark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }

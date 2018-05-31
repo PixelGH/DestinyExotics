@@ -1,33 +1,48 @@
+var itemStates = {};
 var items = {};
+var filters = {};
 
 $(document).ready(() => {
     $.getJSON('db.json', (json) => {
         
         const collections = json.collections;
+
+        for (var collection in collections) {
+            for (var slot in collections[collection]) {
+                for (var item in collections[collection][slot]) {
+                    let Item = collections[collection][slot][item]
+                    items[Item.id] = Item;
+                }
+            }
+        }
     
         for (var collection in collections) {
-            let itemsCollection = '';
+            let itemStatesCollection = '';
             for (var slot in collections[collection]) {
-                let itemsSlot = '';
+                let itemStatesSlot = '';
                 for (var item in collections[collection][slot]) {
-                    itemsSlot += `
-                    <div class="item inactive" id="${collections[collection][slot][item].id}" style="background-image:url('resource/${collections[collection][slot][item].url}')">
+                    let Item = collections[collection][slot][item]
+                    itemStatesSlot += `
+                    <div class="item inactive" id="${Item.id}" style="background-image:url('resource/${Item.url}')">
                         <div class="tooltip">
-                            <div class="tooltip-title">${collections[collection][slot][item].name}</div>
+                            <div class="dlc-badge" style="background-image:url('${Item.dlc + '.png' || ''}')"></div>
+                            <div class="tooltip-title">${Item.damage ? `<img class="damage-icon" src="${Item.damage.toLowerCase()}.png">` : ''}${Item.name}</div>
+                            <div class="small">${Item.detail.source || 'Drop, Engram, Xûr'}</div>
+                            <div class="separator"></div>
                             <div class="tooltip-subtitle">"Lorem Ipsum dolor sit amet consetetur adiscipim elitr."</div>
                         </div>
                     </div>`
-                    items[collections[collection][slot][item].id] = 'inactive';
+                    itemStates[collections[collection][slot][item].id] = 'inactive';
                 }
-                itemsCollection += `<div class="main-category" title="${slot}">${itemsSlot}</div>`
+                itemStatesCollection += `<div class="main-category" data-heading="${slot}">${itemStatesSlot}</div>`
             }
-            $('#main-container').append(`<div class="main-super-category" title="${collection}">${itemsCollection}</div>`)
+            $('#main-container').append(`<div class="main-super-category" data-heading="${collection}">${itemStatesCollection}</div>`)
         }
 
         loadItems();
 
-        for (item in items) {
-            if (items[item] === 'active') {
+        for (item in itemStates) {
+            if (itemStates[item] === 'active') {
                 $(`#${item}`).addClass('active')
                 $(`#${item}`).removeClass('inactive')
             }
@@ -47,26 +62,61 @@ $(document).ready(() => {
 
         $('.item').mousemove((event) => {
             var x = event.clientX, y = event.clientY
-            $(event.target).find('.tooltip').css({
-                'top': `${y - $(event.target).offset().top - 50}px`,
-                'left': `${x - $(event.target).offset().left + 20}px`
+            let tooltip = $(event.target).find('.tooltip')
+            tooltip.css({
+                'top': `${y - $(event.target).offset().top - 65 + $(document).scrollTop()}px`,
+                'left': `${x - $(event.target).offset().left + (tooltip.width() + x + 60 >= $(window).width() ? -tooltip.width() - 40 : 20)}px`
             })
+        })
+
+        $('.filter-list-title').click((event) => {
+            let button = $(event.target)
+            let caret = button.find('span')
+            caret.toggleClass('fa-caret-down')
+            caret.toggleClass('fa-caret-up')
+            button.toggleClass('collapsed')
+        })
+
+        $('.filter-list-item').click((event) => {
+            let item = $(event.target)
+            if (item.hasClass('filter-list-item-active')) {
+                delete filters[item.data('filter-key')]
+            } else {
+                filters[item.data('filter-key')] = item.data('filter-value');
+            }
+            filterItems();
+            item.toggleClass('filter-list-item-active')
         })
     })
 })
 
 function saveItems() {
-    for (item in items) {
-        localStorage.setItem(item, items[item]);
+    for (item in itemStates) {
+        localStorage.setItem(item, itemStates[item]);
     }
 }
 
 function loadItems() {
-    for (item in items) {
-        items[item] = localStorage.getItem(item) || 'inactive';
+    for (item in itemStates) {
+        itemStates[item] = localStorage.getItem(item) || 'inactive';
     }
 }
 
 function saveItem(item, state) {
     localStorage.setItem(item, state);
+}
+
+function filterItems() {
+    for (item in items) {
+        let Item = items[item]
+        $(`#${Item.id}`).css({'display': 'block'})
+        for (filter in filters) {
+            let value = filters[filter]
+            if (Item[filter] != value) {
+                console.log(Item.id)
+                $(`#${Item.id}`).css('display', 'none')
+                break
+            }
+        }
+    }
 }
