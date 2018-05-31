@@ -9,7 +9,7 @@
                     "item": "Weapon",
                     "slot": "Kinetic",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "Submachine Gun",
                     "damage": "Kinetic",
                     "detail": {
@@ -24,7 +24,7 @@
                     "item": "Weapon",
                     "slot": "Kinetic",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "Auto Rifle",
                     "damage": "Kinetic",
                     "detail": {}
@@ -36,7 +36,7 @@
                     "item": "Weapon",
                     "slot": "Kinetic",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "Hand Cannon",
                     "damage": "Kinetic",
                     "detail": {}
@@ -48,7 +48,7 @@
                     "item": "Weapon",
                     "slot": "Kinetic",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "Scout Rifle",
                     "damage": "Kinetic",
                     "detail": {}
@@ -122,7 +122,7 @@
                     "item": "Weapon",
                     "slot": "Energy",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "Scout Rifle",
                     "damage": "Solar",
                     "detail": {}
@@ -134,7 +134,7 @@
                     "item": "Weapon",
                     "slot": "Energy",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "Trace Rifle",
                     "damage": "Solar",
                     "detail": {}
@@ -232,7 +232,7 @@
                     "item": "Weapon",
                     "slot": "Power",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "Sword",
                     "damage": "Void",
                     "detail": {}
@@ -244,7 +244,7 @@
                     "item": "Weapon",
                     "slot": "Power",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "Linear Fusion Rifle",
                     "damage": "Solar",
                     "detail": {}
@@ -256,7 +256,7 @@
                     "item": "Weapon",
                     "slot": "Power",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "Grenade Launcher",
                     "damage": "Void",
                     "detail": {}
@@ -350,6 +350,30 @@
         "hunter exotics": {
             "helmet": [
                 {
+                    "name": "Wormhusk Crown",
+                    "id": "wormhusk_crown",
+                    "url": "wormhusk_crown.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Graviton Forfeit",
+                    "id": "graviton_forfeit",
+                    "url": "graviton_forfeit.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
                     "name": "Celestial Nighthawk",
                     "id": "celestial_nighthawk",
                     "url": "celestial_nighthawk.jpg",
@@ -384,33 +408,21 @@
                     "type": "",
                     "damage": "",
                     "detail": {}
-                },
-                {
-                    "name": "Wormhusk Crown",
-                    "id": "wormhusk_crown",
-                    "url": "wormhusk_crown.jpg",
-                    "item": "Armor",
-                    "slot": "Helmet",
-                    "rarity": "Exotic",
-                    "dlc": "warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Graviton Forfeit",
-                    "id": "graviton_forfeit",
-                    "url": "graviton_forfeit.jpg",
-                    "item": "Armor",
-                    "slot": "Helmet",
-                    "rarity": "Exotic",
-                    "dlc": "osiris",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
                 }
             ],
             "chest": [
+                {
+                    "name": "Ophidia Spathe",
+                    "id": "ophidia_spathe",
+                    "url": "ophidia_spathe.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
                 {
                     "name": "The Dragon's Shadow",
                     "id": "the_dragons_shadow",
@@ -446,21 +458,45 @@
                     "type": "",
                     "damage": "",
                     "detail": {}
-                },
-                {
-                    "name": "Ophidia Spathe",
-                    "id": "ophidia_spathe",
-                    "url": "ophidia_spathe.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
                 }
             ],
             "arms": [
+                {
+                    "name": "Sealed Ahamkara Grasps",
+                    "id": "sealed_ahamkara_grasps",
+                    "url": "sealed_ahamkara_grasps.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Shinobu's Vow",
+                    "id": "shinobus_vow",
+                    "url": "shinobus_vow.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Aeon Swift",
+                    "id": "aeon_swift",
+                    "url": "aeon_swift.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
                 {
                     "name": "Mechaneer's Tricksleeves",
                     "id": "mechaneers_tricksleeves",
@@ -468,7 +504,7 @@
                     "item": "Armor",
                     "slot": "Arms",
                     "rarity": "Exotic",
-                    "dlc": "Arms",
+                    "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -484,33 +520,33 @@
                     "type": "",
                     "damage": "",
                     "detail": {}
-                },
-                {
-                    "name": "Shinobu's Vow",
-                    "id": "shinobus_vow",
-                    "url": "shinobus_vow.jpg",
-                    "item": "Armor",
-                    "slot": "Arms",
-                    "rarity": "Exotic",
-                    "dlc": "osiris",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Aeon Swift",
-                    "id": "aeon_swift",
-                    "url": "aeon_swift.jpg",
-                    "item": "Armor",
-                    "slot": "Arms",
-                    "rarity": "Exotic",
-                    "dlc": "osiris",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
                 }
             ],
             "legs": [
+                {
+                    "name": "FR0ST-EE5",
+                    "id": "fr0st_ee5",
+                    "url": "fr0st_ee5.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Gemini Jester",
+                    "id": "gemini_jester",
+                    "url": "gemini_jester.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
                 {
                     "name": "Lucky Pants",
                     "id": "lucky_pants",
@@ -546,30 +582,6 @@
                     "type": "",
                     "damage": "",
                     "detail": {}
-                },
-                {
-                    "name": "FR0ST-EE5",
-                    "id": "fr0st_ee5",
-                    "url": "fr0st_ee5.jpg",
-                    "item": "Armor",
-                    "slot": "Legs",
-                    "rarity": "Exotic",
-                    "dlc": "warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Gemini Jester",
-                    "id": "gemini_jester",
-                    "url": "gemini_jester.jpg",
-                    "item": "Armor",
-                    "slot": "Legs",
-                    "rarity": "Exotic",
-                    "dlc": "osiris",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
                 }
             ]
         },
@@ -582,7 +594,7 @@
                     "item": "Armor",
                     "slot": "Helmet",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -594,7 +606,7 @@
                     "item": "Armor",
                     "slot": "Helmet",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -632,7 +644,7 @@
                     "item": "Armor",
                     "slot": "Chest",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -682,7 +694,7 @@
                     "item": "Armor",
                     "slot": "Arms",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -694,7 +706,7 @@
                     "item": "Armor",
                     "slot": "Arms",
                     "rarity": "Exotic",
-                    "dlc": "warmind",
+                    "dlc": "Warmind",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -706,7 +718,7 @@
                     "item": "Armor",
                     "slot": "Arms",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -756,7 +768,7 @@
                     "item": "Armor",
                     "slot": "Legs",
                     "rarity": "Exotic",
-                    "dlc": "osiris",
+                    "dlc": "Osiris",
                     "type": "",
                     "damage": "",
                     "detail": {}
@@ -800,10 +812,230 @@
             ]
         },
         "warlock exotics": {
-            "helmet": [],
-            "chest": [],
-            "arms": [],
-            "legs": []
+            "helmet": [
+                {
+                    "name": "Verity's Brow",
+                    "id": "veritys_brow",
+                    "url": "veritys_brow.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "The Stag",
+                    "id": "the_stag",
+                    "url": "the_stag.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Crown of Tempests",
+                    "id": "crown_of_tempests",
+                    "url": "crown_of_tempests.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Nezarec's Sin",
+                    "id": "nezarecs_sin",
+                    "url": "nezarecs_sin.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Eye of Another World",
+                    "id": "eye_of_another_world",
+                    "url": "eye_of_another_world.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Skull of Dire Ahamkara",
+                    "id": "skull_of_dire_ahamkara",
+                    "url": "skull_of_dire_ahamkara.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "Sanguine Alchemy",
+                    "id": "sanguine_alchemy",
+                    "url": "sanguine_alchemy.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Vesper of Radius",
+                    "id": "vesper_of_radius",
+                    "url": "vesper_of_radius.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Starfire Protocol",
+                    "id": "starfire_protocol",
+                    "url": "starfire_protocol.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Wings of Sacred Dawn",
+                    "id": "wings_of_sacred_dawn",
+                    "url": "wings_of_sacred_dawn.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "arms": [
+                {
+                    "name": "Claws of Ahamkara",
+                    "id": "claws_of_ahamkara",
+                    "url": "claws_of_ahamkara.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Ophidian Aspect",
+                    "id": "ophidian_aspect",
+                    "url": "ophidian_aspect.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Aeon Soul",
+                    "id": "aeon_soul",
+                    "url": "aeon_soul.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Winter's Guile",
+                    "id": "winters_guile",
+                    "url": "winters_guile.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Sunbracers",
+                    "id": "sunbracers",
+                    "url": "sunbracers.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Karnstein Armlets",
+                    "id": "karnstein_armlets",
+                    "url": "karnstein_armlets.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ],
+            "legs": [
+                {
+                    "name": "Transversive Steps",
+                    "id": "transversive_steps",
+                    "url": "transversive_steps.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                },
+                {
+                    "name": "Lunafaction Boots",
+                    "id": "lunafaction_boots",
+                    "url": "lunafaction_boots.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "detail": {}
+                }
+            ]
         }
     }
 }
