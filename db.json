@@ -63,7 +63,9 @@
                     "dlc": "Vanilla",
                     "type": "Scout Rifle",
                     "damage": "Kinetic",
-                    "detail": {}
+                    "detail": {
+                        "source": "Quest"
+                    }
                 },
                 {
                     "name": "Rat King",
@@ -75,7 +77,9 @@
                     "dlc": "Vanilla",
                     "type": "Sidearm",
                     "damage": "Kinetic",
-                    "detail": {}
+                    "detail": {
+                        "source": "Quest"
+                    }
                 },
                 {
                     "name": "Sturm",
@@ -87,7 +91,9 @@
                     "dlc": "Vanilla",
                     "type": "Hand Cannon",
                     "damage": "Kinetic",
-                    "detail": {}
+                    "detail": {
+                        "source": "Quest"
+                    }
                 },
                 {
                     "name": "Sweet Business",
@@ -125,7 +131,9 @@
                     "dlc": "Warmind",
                     "type": "Scout Rifle",
                     "damage": "Solar",
-                    "detail": {}
+                    "detail": {
+                        "source": "Quest"
+                    }
                 },
                 {
                     "name": "Prometheus Lens",
@@ -457,7 +465,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 }
             ],
             "arms": [
@@ -507,7 +517,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Young Ahamkara's Spine",
@@ -557,7 +569,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Orpheus Rig",
@@ -659,7 +673,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Crest of Alpha Lupi",
@@ -733,7 +749,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Doom Fang Pauldron",
@@ -745,7 +763,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Synthoceps",
@@ -871,7 +891,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Skull of Dire Ahamkara",
@@ -933,7 +955,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 }
             ],
             "arms": [
@@ -995,7 +1019,9 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Karnstein Armlets",
