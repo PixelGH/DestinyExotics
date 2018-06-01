@@ -12,6 +12,7 @@
                     "dlc": "Warmind",
                     "type": "Submachine Gun",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {
                         "desc": "",
                         "source": ""
@@ -27,6 +28,7 @@
                     "dlc": "Warmind",
                     "type": "Auto Rifle",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -39,6 +41,7 @@
                     "dlc": "Osiris",
                     "type": "Hand Cannon",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -51,6 +54,7 @@
                     "dlc": "Osiris",
                     "type": "Scout Rifle",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -63,8 +67,9 @@
                     "dlc": "Vanilla",
                     "type": "Scout Rifle",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {
-                        "source": "Quest"
+                        "source": "Quest - EDZ"
                     }
                 },
                 {
@@ -77,8 +82,9 @@
                     "dlc": "Vanilla",
                     "type": "Sidearm",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {
-                        "source": "Quest"
+                        "source": "Quest - Titan"
                     }
                 },
                 {
@@ -91,8 +97,9 @@
                     "dlc": "Vanilla",
                     "type": "Hand Cannon",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {
-                        "source": "Quest"
+                        "source": "Quest - Nessus"
                     }
                 },
                 {
@@ -105,6 +112,7 @@
                     "dlc": "Vanilla",
                     "type": "Auto Rifle",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -117,6 +125,7 @@
                     "dlc": "Vanilla",
                     "type": "Pulse Rifle",
                     "damage": "Kinetic",
+                    "class": "",
                     "detail": {}
                 }
             ],
@@ -131,8 +140,9 @@
                     "dlc": "Warmind",
                     "type": "Scout Rifle",
                     "damage": "Solar",
+                    "class": "",
                     "detail": {
-                        "source": "Quest"
+                        "source": "Quest - Mars"
                     }
                 },
                 {
@@ -145,6 +155,7 @@
                     "dlc": "Osiris",
                     "type": "Trace Rifle",
                     "damage": "Solar",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -157,6 +168,7 @@
                     "dlc": "Vanilla",
                     "type": "Trace Rifle",
                     "damage": "Arc",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -169,6 +181,7 @@
                     "dlc": "Vanilla",
                     "type": "Grenade Launcher",
                     "damage": "Void",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -181,7 +194,10 @@
                     "dlc": "Vanilla",
                     "type": "Pulse Rifle",
                     "damage": "Void",
-                    "detail": {}
+                    "class": "",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Hard Light",
@@ -193,6 +209,7 @@
                     "dlc": "Vanilla",
                     "type": "Auto Rifle",
                     "damage": "Variable",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -205,7 +222,10 @@
                     "dlc": "Vanilla",
                     "type": "Submachine Gun",
                     "damage": "Arc",
-                    "detail": {}
+                    "class": "",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 },
                 {
                     "name": "Skyburner's Oath",
@@ -217,6 +237,7 @@
                     "dlc": "Vanilla",
                     "type": "Scout Rifle",
                     "damage": "Solar",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -229,7 +250,10 @@
                     "dlc": "Vanilla",
                     "type": "Hand Cannon",
                     "damage": "Solar",
-                    "detail": {}
+                    "class": "",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 }
             ],
             "power": [
@@ -243,7 +267,10 @@
                     "dlc": "Warmind",
                     "type": "Sword",
                     "damage": "Void",
-                    "detail": {}
+                    "class": "",
+                    "detail": {
+                        "source": "Memory Fragments - Mars"
+                    }
                 },
                 {
                     "name": "Sleeper Simulant",
@@ -255,7 +282,10 @@
                     "dlc": "Warmind",
                     "type": "Linear Fusion Rifle",
                     "damage": "Solar",
-                    "detail": {}
+                    "class": "",
+                    "detail": {
+                        "source": "Quest - Mars"
+                    }
                 },
                 {
                     "name": "The Colony",
@@ -267,6 +297,7 @@
                     "dlc": "Osiris",
                     "type": "Grenade Launcher",
                     "damage": "Void",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -279,6 +310,7 @@
                     "dlc": "Vanilla",
                     "type": "Sniper Rifle",
                     "damage": "Variable",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -291,6 +323,7 @@
                     "dlc": "Vanilla",
                     "type": "Sniper Rifle",
                     "damage": "Arc",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -303,6 +336,7 @@
                     "dlc": "Vanilla",
                     "type": "Shotgun",
                     "damage": "Arc",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -315,6 +349,7 @@
                     "dlc": "Vanilla",
                     "type": "Fusion Rifle",
                     "damage": "Solar",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -327,6 +362,7 @@
                     "dlc": "Vanilla",
                     "type": "Grenade Launcher",
                     "damage": "Arc",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -339,6 +375,7 @@
                     "dlc": "Vanilla",
                     "type": "Rocket Launcher",
                     "damage": "Arc",
+                    "class": "",
                     "detail": {}
                 },
                 {
@@ -351,6 +388,7 @@
                     "dlc": "Vanilla",
                     "type": "Shotgun",
                     "damage": "Void",
+                    "class": "",
                     "detail": {}
                 }
             ]
@@ -367,6 +405,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -379,6 +418,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -391,6 +431,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -403,6 +444,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -415,59 +457,8 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
-                }
-            ],
-            "chest": [
-                {
-                    "name": "Ophidia Spathe",
-                    "id": "ophidia_spathe",
-                    "url": "ophidia_spathe.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "The Dragon's Shadow",
-                    "id": "the_dragons_shadow",
-                    "url": "the_dragons_shadow.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Lucky Raspberry",
-                    "id": "lucky_raspberry",
-                    "url": "lucky_raspberry.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Raiden Flux",
-                    "id": "raiden_flux",
-                    "url": "raiden_flux.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {
-                        "source": "Campaign, Drop, Engram, Xûr"
-                    }
                 }
             ],
             "arms": [
@@ -481,6 +472,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -493,6 +485,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -505,6 +498,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -517,6 +511,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -531,7 +526,64 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "Ophidia Spathe",
+                    "id": "ophidia_spathe",
+                    "url": "ophidia_spathe.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {}
+                },
+                {
+                    "name": "The Dragon's Shadow",
+                    "id": "the_dragons_shadow",
+                    "url": "the_dragons_shadow.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {}
+                },
+                {
+                    "name": "Lucky Raspberry",
+                    "id": "lucky_raspberry",
+                    "url": "lucky_raspberry.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {}
+                },
+                {
+                    "name": "Raiden Flux",
+                    "id": "raiden_flux",
+                    "url": "raiden_flux.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 }
             ],
             "legs": [
@@ -545,6 +597,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -557,6 +610,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -569,6 +623,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -583,6 +638,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 },
                 {
@@ -595,6 +651,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Hunter",
                     "detail": {}
                 }
             ]
@@ -611,6 +668,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -623,6 +681,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -635,6 +694,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -647,58 +707,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
-                    "detail": {}
-                }
-            ],
-            "chest": [
-                {
-                    "name": "Armamentarium",
-                    "id": "armamentarium",
-                    "url": "armamentarium.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Actium War Rig",
-                    "id": "actium_war_rig",
-                    "url": "actium_war_rig.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {
-                        "source": "Campaign, Drop, Engram, Xûr"
-                    }
-                },
-                {
-                    "name": "Crest of Alpha Lupi",
-                    "id": "crest_of_alpha_lupi",
-                    "url": "crest_of_alpha_lupi.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Hallowfire Heart",
-                    "id": "hallowfire_heart",
-                    "url": "hallowfire_heart.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 }
             ],
@@ -713,6 +722,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -725,6 +735,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -737,6 +748,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -749,6 +761,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -763,6 +776,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -777,6 +791,63 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
+                    "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "Armamentarium",
+                    "id": "armamentarium",
+                    "url": "armamentarium.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {}
+                },
+                {
+                    "name": "Actium War Rig",
+                    "id": "actium_war_rig",
+                    "url": "actium_war_rig.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
+                },
+                {
+                    "name": "Crest of Alpha Lupi",
+                    "id": "crest_of_alpha_lupi",
+                    "url": "crest_of_alpha_lupi.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {}
+                },
+                {
+                    "name": "Hallowfire Heart",
+                    "id": "hallowfire_heart",
+                    "url": "hallowfire_heart.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 }
             ],
@@ -791,6 +862,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -803,6 +875,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -815,6 +888,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 },
                 {
@@ -827,6 +901,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Titan",
                     "detail": {}
                 }
             ]
@@ -843,6 +918,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -855,6 +931,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -867,6 +944,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -879,6 +957,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -891,6 +970,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -905,59 +985,8 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
-                }
-            ],
-            "chest": [
-                {
-                    "name": "Sanguine Alchemy",
-                    "id": "sanguine_alchemy",
-                    "url": "sanguine_alchemy.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Warmind",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Vesper of Radius",
-                    "id": "vesper_of_radius",
-                    "url": "vesper_of_radius.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Osiris",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Starfire Protocol",
-                    "id": "starfire_protocol",
-                    "url": "starfire_protocol.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {}
-                },
-                {
-                    "name": "Wings of Sacred Dawn",
-                    "id": "wings_of_sacred_dawn",
-                    "url": "wings_of_sacred_dawn.jpg",
-                    "item": "Armor",
-                    "slot": "Chest",
-                    "rarity": "Exotic",
-                    "dlc": "Vanilla",
-                    "type": "",
-                    "damage": "",
-                    "detail": {
-                        "source": "Campaign, Drop, Engram, Xûr"
-                    }
                 }
             ],
             "arms": [
@@ -971,6 +1000,7 @@
                     "dlc": "Warmind",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -983,6 +1013,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -995,6 +1026,7 @@
                     "dlc": "Osiris",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -1007,6 +1039,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -1019,6 +1052,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {
                         "source": "Campaign, Drop, Engram, Xûr"
                     }
@@ -1033,7 +1067,64 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
+                }
+            ],
+            "chest": [
+                {
+                    "name": "Sanguine Alchemy",
+                    "id": "sanguine_alchemy",
+                    "url": "sanguine_alchemy.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {}
+                },
+                {
+                    "name": "Vesper of Radius",
+                    "id": "vesper_of_radius",
+                    "url": "vesper_of_radius.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {}
+                },
+                {
+                    "name": "Starfire Protocol",
+                    "id": "starfire_protocol",
+                    "url": "starfire_protocol.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {}
+                },
+                {
+                    "name": "Wings of Sacred Dawn",
+                    "id": "wings_of_sacred_dawn",
+                    "url": "wings_of_sacred_dawn.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Exotic",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Campaign, Drop, Engram, Xûr"
+                    }
                 }
             ],
             "legs": [
@@ -1047,6 +1138,7 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
                 },
                 {
@@ -1059,7 +1151,1188 @@
                     "dlc": "Vanilla",
                     "type": "",
                     "damage": "",
+                    "class": "Warlock",
                     "detail": {}
+                }
+            ]
+        },
+        "raid": {
+            "weapons": [
+                {
+                    "name": "Midnight Coup",
+                    "id": "midnight_coup",
+                    "url": "midnight_coup.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Hand Cannon",
+                    "damage": "Kinetic",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Ghost Primus",
+                    "id": "ghost_primus",
+                    "url": "ghost_primus.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Auto Rifle",
+                    "damage": "Kinetic",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Conspirator",
+                    "id": "conspirator",
+                    "url": "conspirator.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Scout Rifle",
+                    "damage": "Solar",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Inaugural Address",
+                    "id": "inaugural_address",
+                    "url": "inaugural_address.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Pulse Rifle",
+                    "damage": "Void",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Alone as a God",
+                    "id": "alone_as_a_god",
+                    "url": "alone_as_a_god.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Sniper Rifle",
+                    "damage": "Solar",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "It Stared Back",
+                    "id": "it_stared_back",
+                    "url": "it_stared_back.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Sword",
+                    "damage": "Solar",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Sins of the Past",
+                    "id": "sins_of_the_past",
+                    "url": "sins_of_the_past.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "Rocket Launcher",
+                    "damage": "Arc",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                }
+            ],
+            "hunter": [
+                {
+                    "name": "Helm of the Ace-Defiant",
+                    "id": "helm_of_the_ace_defiant",
+                    "url": "helm_of_the_ace_defiant.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Grips of the Ace-Defiant",
+                    "id": "grips_of_the_ace_defiant",
+                    "url": "grips_of_the_ace_defiant.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Vest of the Ace-Defiant",
+                    "id": "vest_of_the_ace_defiant",
+                    "url": "vest_of_the_ace_defiant.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Boots of the Ace-Defiant",
+                    "id": "boots_of_the_ace_defiant",
+                    "url": "boots_of_the_ace_defiant.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Shadow's Cloak",
+                    "id": "shadows_cloak",
+                    "url": "shadows_cloak.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Mask of the Emperor's Agent",
+                    "id": "mask_of_the_emperors_agent",
+                    "url": "mask_of_the_emperors_agent.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan Prestige"
+                    }
+                },
+                {
+                    "name": "Gloves of the Emperor's Agent",
+                    "id": "gloves_of_the_emperors_agent",
+                    "url": "gloves_of_the_emperors_agent.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan Prestige"
+                    }
+                },
+                {
+                    "name": "Vest of the Emperor's Agent",
+                    "id": "vest_of_the_emperors_agent",
+                    "url": "vest_of_the_emperors_agent.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan Prestige"
+                    }
+                },
+                {
+                    "name": "Boots of the Emperor's Agent",
+                    "id": "boots_of_the_emperors_agent",
+                    "url": "boots_of_the_emperors_agent.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan Prestige"
+                    }
+                },
+                {
+                    "name": "Cloak of the Emperor's Agent",
+                    "id": "cloak_of_the_emperors_agent",
+                    "url": "cloak_of_the_emperors_agent.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Leviathan Prestige"
+                    }
+                }
+            ],
+            "titan": [
+                {
+                    "name": "Mask of Rull",
+                    "id": "mask_of_rull",
+                    "url": "mask_of_rull.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Gauntlets of Rull",
+                    "id": "gauntlets_of_rull",
+                    "url": "gauntlets_of_rull.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Chassis of Rull",
+                    "id": "chassis_of_rull",
+                    "url": "chassis_of_rull.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Greaves of Rull",
+                    "id": "greaves_of_rull",
+                    "url": "greaves_of_rull.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },               
+                {
+                    "name": "Shadow's Mark",
+                    "id": "shadows_mark",
+                    "url": "shadows_mark.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Helm of the Emperor's Champion",
+                    "id": "helm_of_the_emperors_champion",
+                    "url": "helm_of_the_emperors_champion.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Gauntlets of the Emperor's Champion",
+                    "id": "gauntlets_of_the_emperors_champion",
+                    "url": "gauntlets_of_the_emperors_champion.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Cuirass of the Emperor's Champion",
+                    "id": "cuirass_of_the_emperors_champion",
+                    "url": "cuirass_of_the_emperors_champion.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Greaves of the Emperor's Champion",
+                    "id": "greaves_of_the_emperors_champion",
+                    "url": "greaves_of_the_emperors_champion.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Mark of the Emperor's Champion",
+                    "id": "mark_of_the_emperors_champion",
+                    "url": "mark_of_the_emperors_champion.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                }
+            ],
+            "warlock": [
+                {
+                    "name": "Mask of the Fulminator",
+                    "id": "mask_of_the_fulminator",
+                    "url": "mask_of_the_fulminator.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Wraps of the Fulminator",
+                    "id": "wraps_of_the_fulminator",
+                    "url": "wraps_of_the_fulminator.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Robes of the Fulminator",
+                    "id": "robes_of_the_fulminator",
+                    "url": "robes_of_the_fulminator.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Boots of the Fulminator",
+                    "id": "boots_of_the_fulminator",
+                    "url": "boots_of_the_fulminator.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Shadow's Bond",
+                    "id": "shadows_bond",
+                    "url": "shadows_bond.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan"
+                    }
+                },
+                {
+                    "name": "Headpiece of the Emperor's Minister",
+                    "id": "headpiece_of_the_emperors_minister",
+                    "url": "headpiece_of_the_emperors_minister.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Wraps of the Emperor's Minister",
+                    "id": "wraps_of_the_emperors_minister",
+                    "url": "wraps_of_the_emperors_minister.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Robes of the Emperor's Minister",
+                    "id": "robes_of_the_emperors_minister",
+                    "url": "robes_of_the_emperors_minister.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Boots of the Emperor's Minister",
+                    "id": "boots_of_the_emperors_minister",
+                    "url": "boots_of_the_emperors_minister.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                },
+                {
+                    "name": "Bond of the Emperor's Minister",
+                    "id": "bond_of_the_emperors_minister",
+                    "url": "bond_of_the_emperors_minister.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Vanilla",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Leviathan - Prestige"
+                    }
+                }
+            ]
+        },
+        "raid lair": {
+            "weapons": [
+                {
+                    "name": "Last of the Legion",
+                    "id": "last_of_the_legion",
+                    "url": "last_of_the_legion.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Sidearm",
+                    "damage": "Kinetic",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "The Emperor's Envy",
+                    "id": "the_emperors_envy",
+                    "url": "the_emperors_envy.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Fusion Rifle",
+                    "damage": "Void",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Zenith of your Kind",
+                    "id": "zenith_of_your_kind",
+                    "url": "zenith_of_your_kind.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "Shotgun",
+                    "damage": "Void",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "I Am Alive",
+                    "id": "i_am_alive",
+                    "url": "i_am_alive.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "Grenade Launcher",
+                    "damage": "Void",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                }
+            ],
+            "hunter": [
+                {
+                    "name": "Equitis Shade Cowl",
+                    "id": "equitis_shade_cowl",
+                    "url": "equitis_shade_cowl.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Equitis Shade Grips",
+                    "id": "equitis_shade_grips",
+                    "url": "equitis_shade_grips.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Equitis Shade Rig",
+                    "id": "equitis_shade_rig",
+                    "url": "equitis_shade_rig.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Equitis Shade Boots",
+                    "id": "equitis_shade_boots",
+                    "url": "equitis_shade_boots.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Equitis Shade Cloak",
+                    "id": "equitis_shade_cloak",
+                    "url": "equitis_shade_cloak.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Mask of Feltroc",
+                    "id": "mask_of_feltroc",
+                    "url": "mask_of_feltroc.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Grips of Feltroc",
+                    "id": "grips_of_feltroc",
+                    "url": "grips_of_feltroc.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Vest of Feltroc",
+                    "id": "vest_of_feltroc",
+                    "url": "vest_of_feltroc.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Boots of Feltroc",
+                    "id": "boots_of_feltroc",
+                    "url": "boots_of_feltroc.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Cloak of Feltroc",
+                    "id": "cloak_of_feltroc",
+                    "url": "cloak_of_feltroc.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                }
+            ],
+            "titan": [
+                {
+                    "name": "Turris Shade Helm",
+                    "id": "turris_shade_helm",
+                    "url": "turris_shade_helm.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Turris Shade Gauntlets",
+                    "id": "turris_shade_gauntlets",
+                    "url": "turris_shade_gauntlets.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Turris Shade Plate",
+                    "id": "turris_shade_plate",
+                    "url": "turris_shade_plate.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Turris Shade Greaves",
+                    "id": "turris_shade_greaves",
+                    "url": "turris_shade_greaves.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Turris Shade Mark",
+                    "id": "turris_shade_mark",
+                    "url": "turris_shade_mark.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Mask of Nohr",
+                    "id": "mask_of_nohr",
+                    "url": "mask_of_nohr.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Gauntlets of Nohr",
+                    "id": "gauntlets_of_nohr",
+                    "url": "gauntlets_of_nohr.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Plate of Nohr",
+                    "id": "plate_of_nohr",
+                    "url": "plate_of_nohr.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Greaves of Nohr",
+                    "id": "greaves_of_nohr",
+                    "url": "greaves_of_nohr.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Mark of Nohr",
+                    "id": "mark_of_nohr",
+                    "url": "mark_of_nohr.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                }
+            ],
+            "warlock": [
+                {
+                    "name": "Insigne Shade Cover",
+                    "id": "insigne_shade_cover",
+                    "url": "insigne_shade_cover.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Insigne Shade Gloves",
+                    "id": "insigne_shade_gloves",
+                    "url": "insigne_shade_gloves.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Insigne Shade Robes",
+                    "id": "insigne_shade_robes",
+                    "url": "insigne_shade_robes.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Insigne Shade Boots",
+                    "id": "insigne_shade_boots",
+                    "url": "insigne_shade_boots.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Insigne Shade Bond",
+                    "id": "insigne_shade_bond",
+                    "url": "insigne_shade_bond.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Spire of Stars"
+                    }
+                },
+                {
+                    "name": "Mask of Sekris",
+                    "id": "mask_of_sekris",
+                    "url": "mask_of_sekris.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Wraps of Sekris",
+                    "id": "wraps_of_sekris",
+                    "url": "wraps_of_sekris.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Robes of Sekris",
+                    "id": "robes_of_sekris",
+                    "url": "robes_of_sekris.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Boots of Sekris",
+                    "id": "boots_of_sekris",
+                    "url": "boots_of_sekris.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                },
+                {
+                    "name": "Bond of Sekris",
+                    "id": "bond_of_sekris",
+                    "url": "bond_of_sekris.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "",
+                    "damage": "",
+                    "class": "Warlock",
+                    "detail": {
+                        "source": "Eater of Worlds"
+                    }
+                }
+            ]
+        },
+        "strikes": {
+            "weapons": [
+                {
+                    "name": "D.F.A.",
+                    "id": "dfa",
+                    "url": "dfa.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "Hand Cannon",
+                    "damage": "Kinetic",
+                    "detail": {
+                        "source": "Nightfall - Tree of Probabilities"
+                    }
+                },
+                {
+                    "name": "Duty Bound",
+                    "id": "duty_bound",
+                    "url": "duty_bound.jpg",
+                    "item": "Weapon",
+                    "slot": "Kinetic",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "Auto Rifle",
+                    "damage": "Kinetic",
+                    "detail": {
+                        "source": "Nightfall - Savathûn's Song"
+                    }
+                },
+                {
+                    "name": "Silicon Neuroma",
+                    "id": "silicon_neuroma",
+                    "url": "silicon_neuroma.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Osiris",
+                    "type": "Sniper Rifle",
+                    "damage": "Arc",
+                    "detail": {
+                        "source": "Nightfall - Pyramidion"
+                    }
+                }
+            ]
+        },
+        "escalation protocol": {
+            "weapons": [
+                {
+                    "name": "IKELOS_HC_v1.0.1",
+                    "id": "ikelos_hc_v1_0_1",
+                    "url": "ikelos_hc_v1_0_1.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Hand Cannon",
+                    "damage": "Solar",
+                    "detail": {
+                        "source": "Quest - Mars"
+                    }
+                },
+                {
+                    "name": "IKELOS_SMG_v1.0.1",
+                    "id": "ikelos_smg_v1_0_1",
+                    "url": "ikelos_smg_v1_0_1.jpg",
+                    "item": "Weapon",
+                    "slot": "Energy",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Submachine Gun",
+                    "damage": "Arc",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "IKELOS_SR_v1.0.1",
+                    "id": "ikelos_sr_v1_0_1",
+                    "url": "ikelos_sr_v1_0_1.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Sniper Rifle",
+                    "damage": "Solar",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "IKELOS_SG_v1.0.1",
+                    "id": "ikelos_sg_v1_0_1",
+                    "url": "ikelos_sg_v1_0_1.jpg",
+                    "item": "Weapon",
+                    "slot": "Power",
+                    "rarity": "Legendary",
+                    "dlc": "Warmind",
+                    "type": "Shotgun",
+                    "damage": "Void",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
                 }
             ]
         }

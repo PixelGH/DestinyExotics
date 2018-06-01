@@ -3,18 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #EDEDEC;
+    padding-top: 30px;
 }
 
 #main-container {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .main-super-category {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     margin: 20px;
     margin-right: 0px;
     margin-top: 40px;
@@ -35,6 +37,7 @@ body {
 .main-category {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     margin: 35px;
     margin-left: 10px;
     position: relative;
@@ -188,6 +191,7 @@ li {
     background-position: center;
     background-size: 30px 30px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .filter-box {
@@ -207,10 +211,14 @@ li {
     text-transform: uppercase;
 }
 
-.filter-list-title {
+.filter-list-title {    
     font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 ul {
@@ -230,6 +238,10 @@ ul {
 .filter-list-item {
     cursor: pointer;
     position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .filter-list-item-active::before {

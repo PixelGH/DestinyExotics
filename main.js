@@ -95,20 +95,19 @@ $(document).ready(() => {
     })
 })
 
-function saveItems() {
-    for (item in itemStates) {
-        localStorage.setItem(item, itemStates[item]);
-    }
-}
-
 function loadItems() {
-    for (item in itemStates) {
-        itemStates[item] = localStorage.getItem(item) || 'inactive';
-    }
+    itemStates = JSON.parse(localStorage.getItem('destiny-collector-item-states')) || (() => {
+        let object = {}
+        for (key of Object.keys(items)) {
+            object[key] = 'inactive'
+        }
+        return object
+    })()
 }
 
 function saveItem(item, state) {
-    localStorage.setItem(item, state);
+    itemStates[item] = state;
+    localStorage.setItem('destiny-collector-item-states', JSON.stringify(itemStates));
 }
 
 function filterItems() {
