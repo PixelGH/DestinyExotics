@@ -10,7 +10,6 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: flex-start;
 }
 
 .main-super-category {
@@ -18,7 +17,7 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     margin: 20px;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-top: 40px;
     position: relative;
     max-width: 500px;
@@ -37,8 +36,10 @@ body {
 .main-category {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-content: flex-start;
-    margin: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: 10px;
     position: relative;
     width: 500px;
@@ -48,6 +49,7 @@ body {
     content: attr(data-heading);
     position: absolute;
     top: -25px;
+    left: 0;
     text-transform: uppercase;
     font-weight: bold;
     color: #12161A;
@@ -61,9 +63,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
-    margin-top: 10px;
-    margin-left: 10x;
-    margin-right: 10px;
+    margin: 7px;
     position: relative;
 }
 
@@ -140,6 +140,7 @@ li {
     z-index: 100;
     cursor: default;
     pointer-events: none;
+    width: 300px;
 }
 
 .tooltipped:hover .tooltip {
@@ -155,7 +156,7 @@ li {
     color: #EEEEEE;
     font-style: italic;
     font-size: 13px;
-    max-width: 300px;
+    overflow-wrap: break-word;
 }
 
 .small {

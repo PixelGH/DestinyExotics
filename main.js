@@ -3,11 +3,13 @@ var items = {};
 var filters = [];
 var containers = []
 var superContainers = []
+var meta = {}
 
 $(document).ready(() => {
     $.getJSON('db.json', (json) => {
         
         const collections = json.collections;
+        meta = json.meta;
 
         for (var collection in collections) {
             superContainers.push(collection.split(' ').join('-'))
@@ -31,9 +33,9 @@ $(document).ready(() => {
                         <div class="tooltip">
                         <div class="dlc-badge" style="background-image:url('${Item.dlc + '.png' || ''}')"></div>
                         <div class="tooltip-title">${Item.damage ? `<img class="damage-icon" src="${Item.damage.toLowerCase()}.png">` : ''}${Item.name}</div>
-                        <div class="small">${Item.detail.source || 'Drop, Engram, Xûr'}</div>
+                        <div class="small">${Item.detail.source || meta.defaults[Item.item].source}</div>
                         <div class="separator"></div>
-                            <div class="tooltip-subtitle">"${Item.detail.desc}"</div>
+                            <div class="tooltip-subtitle">${Item.detail.desc}</div>
                         </div>
                     </div>`
                     itemStates[collections[collection][slot][item].id] = 'inactive';
