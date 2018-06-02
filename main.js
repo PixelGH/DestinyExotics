@@ -29,11 +29,11 @@ $(document).ready(() => {
                     itemStatesSlot += `
                     <div class="item inactive tooltipped" id="${Item.id}" style="background-image:url('resource/${Item.url}')">
                         <div class="tooltip">
-                            <div class="dlc-badge" style="background-image:url('${Item.dlc + '.png' || ''}')"></div>
-                            <div class="tooltip-title">${Item.damage ? `<img class="damage-icon" src="${Item.damage.toLowerCase()}.png">` : ''}${Item.name}</div>
-                            <div class="small">${Item.detail.source || 'Drop, Engram, Xûr'}</div>
-                            <div class="separator"></div>
-                            <div class="tooltip-subtitle">"Lorem Ipsum dolor sit amet consetetur adiscipim elitr."</div>
+                        <div class="dlc-badge" style="background-image:url('${Item.dlc + '.png' || ''}')"></div>
+                        <div class="tooltip-title">${Item.damage ? `<img class="damage-icon" src="${Item.damage.toLowerCase()}.png">` : ''}${Item.name}</div>
+                        <div class="small">${Item.detail.source || 'Drop, Engram, Xûr'}</div>
+                        <div class="separator"></div>
+                            <div class="tooltip-subtitle">"${Item.detail.desc}"</div>
                         </div>
                     </div>`
                     itemStates[collections[collection][slot][item].id] = 'inactive';

@@ -153,10 +153,9 @@ li {
 
 .tooltip-subtitle {
     color: #EEEEEE;
-    white-space: nowrap;
-    overflow-wrap: normal;
     font-style: italic;
     font-size: 13px;
+    max-width: 300px;
 }
 
 .small {

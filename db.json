@@ -14,8 +14,8 @@
                     "damage": "Kinetic",
                     "class": "",
                     "detail": {
-                        "desc": "",
-                        "source": ""
+                        "source": "",
+                        "desc": "Nothin' in the world that 30 rounds can't solve."
                     }
                 },
                 {
@@ -29,12 +29,14 @@
                     "type": "Auto Rifle",
                     "damage": "Kinetic",
                     "class": "",
-                    "detail": {}
+                    "detail": {
+                        "desc": "Nostalgia as a weapon of war. Style as a hallmark of victory."
+                    }
                 },
                 {
-                    "name": "Chrimson",
-                    "id": "chrimson",
-                    "url": "chrimson.jpg",
+                    "name": "Crimson",
+                    "id": "crimson",
+                    "url": "crimson.jpg",
                     "item": "Weapon",
                     "slot": "Kinetic",
                     "rarity": "Exotic",
@@ -42,7 +44,9 @@
                     "type": "Hand Cannon",
                     "damage": "Kinetic",
                     "class": "",
-                    "detail": {}
+                    "detail": {
+                        "desc": "According to official Vanguard policy, this weapon does not exist."
+                    }
                 },
                 {
                     "name": "The Jade Rabbit",
@@ -55,7 +59,9 @@
                     "type": "Scout Rifle",
                     "damage": "Kinetic",
                     "class": "",
-                    "detail": {}
+                    "detail": {
+                        "desc": "What kind of harebrained scheme have you got in mind this time?"
+                    }
                 },
                 {
                     "name": "MIDA Multi-Tool",
@@ -69,6 +75,7 @@
                     "damage": "Kinetic",
                     "class": "",
                     "detail": {
+                        "desc": "Select application: Ballistic engagement. Entrenching tool. Avionics trawl. Troll smasher. Stellar sextant. List continues.",
                         "source": "Quest - EDZ"
                     }
                 },
@@ -2330,6 +2337,83 @@
                     "dlc": "warmind",
                     "type": "Shotgun",
                     "damage": "Void",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                }
+            ],
+            "hunter": [
+                {
+                    "name": "Abhorrent Imperative Mask",
+                    "id": "abhorrent_imperative_mask",
+                    "url": "abhorrent_imperative_mask.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Legendary",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "Abhorrent Imperative Grasps",
+                    "id": "abhorrent_imperative_grasps",
+                    "url": "abhorrent_imperative_grasps.jpg",
+                    "item": "Armor",
+                    "slot": "Arms",
+                    "rarity": "Legendary",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "Abhorrent Imperative Vest",
+                    "id": "abhorrent_imperative_vest",
+                    "url": "abhorrent_imperative_vest.jpg",
+                    "item": "Armor",
+                    "slot": "Chest",
+                    "rarity": "Legendary",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "Abhorrent Imperative Strides",
+                    "id": "abhorrent_imperative_strides",
+                    "url": "abhorrent_imperative_strides.jpg",
+                    "item": "Armor",
+                    "slot": "Legs",
+                    "rarity": "Legendary",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
+                    "detail": {
+                        "source": "Escalation Protocol"
+                    }
+                },
+                {
+                    "name": "Abhorrent Imperative Cloak",
+                    "id": "abhorrent_imperative_cloak",
+                    "url": "abhorrent_imperative_cloak.jpg",
+                    "item": "Armor",
+                    "slot": "Class",
+                    "rarity": "Legendary",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Hunter",
                     "detail": {
                         "source": "Escalation Protocol"
                     }
