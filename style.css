@@ -135,7 +135,9 @@ li {
     left: 0;
     top: 0;
     padding: 15px;
-    background-color: #12161AEE;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(18,22,26, 238);
     display: none;
     z-index: 100;
     cursor: default;
