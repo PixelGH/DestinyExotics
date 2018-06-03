@@ -87,7 +87,7 @@ $(document).ready(() => {
             let item = $(event.target)
             let key = item.data('filter-key'), value = item.data('filter-value')
             if (item.hasClass('filter-list-item-active')) {
-                filters.splice(filters.indexOf({key: key, value: value}), 1)
+                filters.splice(filters.findIndex(compareObject({key: key, value: value})), 1)
             } else {
                 filters.push({key: key, value: value})
             }
@@ -96,6 +96,12 @@ $(document).ready(() => {
         })
     })
 })
+
+function compareObject(object) {
+    return (otherObject) => {
+        return JSON.stringify(object) === JSON.stringify(otherObject)
+    }
+}
 
 function loadItems() {
     itemStates = JSON.parse(localStorage.getItem('destiny-collector-item-states')) || (() => {
