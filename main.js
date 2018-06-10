@@ -7,7 +7,7 @@ var meta = {}
 
 $(document).ready(() => {
     $.getJSON('db.json', (json) => {
-        
+
         const collections = json.collections;
         meta = json.meta;
 
@@ -21,7 +21,7 @@ $(document).ready(() => {
                 }
             }
         }
-    
+
         for (var collection in collections) {
             let itemStatesCollection = '';
             for (var slot in collections[collection]) {
@@ -53,15 +53,21 @@ $(document).ready(() => {
                 $(`#${item}`).removeClass('inactive')
             }
         }
-    
+
         $('.item').click((event) => {
-            if ($(event.target).hasClass('active')) {
-                $(event.target).addClass('inactive');
-                $(event.target).removeClass('active');
-                saveItem(event.target.id, 'inactive');
+            let target = $(event.target);
+            if (target.hasClass('active')) {
+                if (target.hasClass('masterwork') || !items[event.target.id].detail.masterworkable) {
+                    target.addClass('inactive');
+                    target.removeClass('active');
+                    target.removeClass('masterwork');
+                    saveItem(event.target.id, 'inactive');
+                } else {
+                    target.addClass('masterwork');
+                }
             } else {
-                $(event.target).addClass('active');
-                $(event.target).removeClass('inactive');
+                target.addClass('active');
+                target.removeClass('inactive');
                 saveItem(event.target.id, 'active');
             }
         })
@@ -87,9 +93,9 @@ $(document).ready(() => {
             let item = $(event.target)
             let key = item.data('filter-key'), value = item.data('filter-value')
             if (item.hasClass('filter-list-item-active')) {
-                filters.splice(filters.findIndex(compareObject({key: key, value: value})), 1)
+                filters.splice(filters.findIndex(compareObject({ key: key, value: value })), 1)
             } else {
-                filters.push({key: key, value: value})
+                filters.push({ key: key, value: value })
             }
             filterItems();
             item.toggleClass('filter-list-item-active')
@@ -121,7 +127,7 @@ function saveItem(item, state) {
 function filterItems() {
     for (item in items) {
         let Item = items[item]
-        $(`#${Item.id}`).css({'display': 'block'})
+        $(`#${Item.id}`).css({ 'display': 'block' })
         for (filter of filters) {
             if (Item[filter.key] != filter.value) {
                 $(`#${Item.id}`).css('display', 'none')
@@ -132,6 +138,7 @@ function filterItems() {
     $('.main-category').show();
     $('.main-super-category').show();
     formatContainers();
+
 }
 
 function formatContainers() {

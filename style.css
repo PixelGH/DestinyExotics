@@ -28,7 +28,7 @@ body {
     content: attr(data-heading);
     position: absolute;
     top: -35px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bolder;
     color: #12161A;
 }
@@ -50,8 +50,8 @@ body {
     position: absolute;
     top: -25px;
     left: 0;
-    text-transform: uppercase;
     font-weight: bold;
+    text-transform: capitalize;
     color: #12161A;
 }
 
@@ -59,12 +59,13 @@ body {
     height: 65px;
     width: 65px;
     border: 2px solid #FFFFFF;
-    margin: 0;
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
     margin: 7px;
+    margin-left: 0;
     position: relative;
+    transition: border 0.2s ease-out;
 }
 
 .item::after {
@@ -101,6 +102,10 @@ body {
     opacity: 0;
 }
 
+.masterwork {
+    border: 2px solid #EBCF28;
+}
+
 .inactive::before {
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -111,7 +116,7 @@ body {
     top: 0;
     left: 0;
     background-color: #12171C;
-    height: 45px;
+    height: 60px;
 }
 
 #content {
@@ -137,7 +142,7 @@ li {
     padding: 15px;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    background-color: rgba(18,22,26, 238);
+    background-color: rgba(18,22,26,238);
     display: none;
     z-index: 100;
     cursor: default;
@@ -175,6 +180,10 @@ li {
     border-top: 1px solid #CCCCCC;
 }
 
+.thicc {
+    border-top: 2px solid #12161A;
+}
+
 .dlc-badge {
     position: absolute;
     top: 10px;
@@ -209,8 +218,11 @@ li {
 .filter-title {
     width: 100%;
     font-weight: bolder;
-    text-align: center;
     text-transform: uppercase;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .filter-list-title {    
