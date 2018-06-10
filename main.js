@@ -38,7 +38,6 @@ $(document).ready(() => {
                             <div class="tooltip-subtitle">${Item.detail.desc}</div>
                         </div>
                     </div>`
-                    itemStates[collections[collection][slot][item].id] = 'inactive';
                 }
                 itemStatesCollection += `<div class="main-category" id="${collection.split(' ').join('-') + '-' + slot.split(' ').join('-')}" data-heading="${slot}">${itemStatesSlot}</div>`
             }
@@ -48,9 +47,12 @@ $(document).ready(() => {
         loadItems();
 
         for (item in itemStates) {
-            if (itemStates[item] === 'active') {
+            if (itemStates[item] === 'active' || itemStates[item] === 'masterwork') {
                 $(`#${item}`).addClass('active')
                 $(`#${item}`).removeClass('inactive')
+                if (itemStates[item] === 'masterwork') {
+                    $(`#${item}`).addClass('masterwork')
+                }
             }
         }
 
@@ -64,6 +66,7 @@ $(document).ready(() => {
                     saveItem(event.target.id, 'inactive');
                 } else {
                     target.addClass('masterwork');
+                    saveItem(event.target.id, 'masterwork');
                 }
             } else {
                 target.addClass('active');
