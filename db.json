@@ -799,6 +799,22 @@
         "titan exotics": {
             "helmet": [
                 {
+                    "name": "Khepri's Horn",
+                    "id": "khepris_horn",
+                    "url": "khepris_horn.jpg",
+                    "item": "Armor",
+                    "slot": "Helmet",
+                    "rarity": "Exotic",
+                    "dlc": "warmind",
+                    "type": "",
+                    "damage": "",
+                    "class": "Titan",
+                    "detail": {
+                        "desc": "\"I pushed the sun. I can push you, too.\" —Inscription inside the helm",
+                        "masterworkable": false
+                    }
+                },
+                {
                     "name": "Eternal Warrior",
                     "id": "eternal_warrior",
                     "url": "eternal_warrior.jpg",

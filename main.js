@@ -75,11 +75,11 @@ $(document).ready(() => {
             }
         })
 
-        $('.item').mousemove((event) => {
+        $('.tooltipped').mousemove((event) => {
             var x = event.clientX, y = event.clientY
             let tooltip = $(event.target).find('.tooltip')
             tooltip.css({
-                'top': `${y - $(event.target).offset().top - 65 + $(document).scrollTop()}px`,
+                'top': `${y - $(event.target).offset().top + $(document).scrollTop()}px`,
                 'left': `${x - $(event.target).offset().left + (tooltip.width() + x + 60 >= $(window).width() ? -tooltip.width() - 40 : 20)}px`
             })
         })

@@ -20,7 +20,7 @@ body {
     margin-right: 20px;
     margin-top: 40px;
     position: relative;
-    max-width: 500px;
+    width: 500px;
     border-left: 1px solid #CECECE;
 }
 
@@ -29,7 +29,7 @@ body {
     position: absolute;
     top: -35px;
     text-transform: capitalize;
-    font-weight: bolder;
+    font-weight: bold;
     color: #12161A;
 }
 
@@ -42,7 +42,7 @@ body {
     margin-bottom: 35px;
     margin-left: 10px;
     position: relative;
-    width: 500px;
+    width: 400px;
 }
 
 .main-category::after {
@@ -62,7 +62,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
-    margin: 7px;
+    margin: 10px;
     margin-left: 0;
     position: relative;
     transition: border 0.2s ease-out;
@@ -148,6 +148,10 @@ li {
     cursor: default;
     pointer-events: none;
     width: 300px;
+}
+
+.tooltip-small {
+    width: auto;
 }
 
 .tooltipped:hover .tooltip {
@@ -296,4 +300,19 @@ a {
 
 .footer-list {
     padding: 0;
+}
+
+.season-badge {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    height: 26px;
+    width: 26px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 18px;
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    cursor: default;
 }
