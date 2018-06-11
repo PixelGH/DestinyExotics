@@ -301,18 +301,3 @@ a {
 .footer-list {
     padding: 0;
 }
-
-.season-badge {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    height: 26px;
-    width: 26px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 18px;
-    border: 2px solid #FFFFFF;
-    text-align: center;
-    cursor: default;
-}
